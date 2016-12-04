@@ -1,0 +1,81 @@
+body {
+    background: #444;
+}
+
+/* Header */
+
+.header {
+    background: #22313F;
+    height: 100px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.site-title {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.site-title img {
+    display: inline-block;
+    width: auto;
+    height: 80px;
+    margin: 0 15px 0 0;
+}
+
+.site-title h1 {
+    position: relative;
+    bottom: 30px;
+    display: inline-block;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+}
+
+/* Site Menu */
+
+.site-menu {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.site-menu .logo {
+    display: block;
+    float: left;
+    width: auto;
+    height: 80px;
+}
+
+.site-menu .menu {
+    position: relative;
+    top: 20px;
+    float: right;
+}
+
+.site-menu .menu ul > li {
+    display: inline-block;
+    margin: 0 -4px 0 0;
+}
+
+.site-menu .menu ul > li a {
+    display: block;
+    height: 40px;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 11px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Content */
+
+.content {
+    height: 450px;
+}
