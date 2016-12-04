@@ -417,24 +417,3 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-
-#header {
-  background: #3366FF;
-  text-align: center;
-}
-#header a {
-  color: white;
-}
-#header img {
-  width: 100px;
-  position:relative;
-  top: 15px;
-  display: inline-block;
-}
-
-#header h4 {
-  display: inline-block;
-  position: relative;
-  left: 5px;
-  bottom: 5px;
-}
