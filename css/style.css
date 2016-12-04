@@ -1,5 +1,34 @@
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../webfonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: italic;
+    font-weight: normal;
+    src: url('../webfonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: bold;
+    src: url('../webfonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: italic;
+    font-weight: bold;
+    src: url('../webfonts/Lato-BoldItalic.ttf');
+}
+
 body {
     background: #444;
+    font-family: "Lato", sans-serif;
 }
 
 /* Header */
@@ -37,12 +66,12 @@ body {
 /* Site Menu */
 
 .site-menu {
-    position: fixed;
     top: 100px;
     width: 100%;
     height: 100px;
     padding: 10px;
     box-sizing: border-box;
+    transition: top 0.1s ease-in-out;
 }
 
 .site-menu .logo {
