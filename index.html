@@ -25,7 +25,7 @@
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section class="header">
+<section id="header" class="header">
     <div class="container">
         <div class="row">
             <div class="twelve columns">
@@ -54,6 +54,42 @@
         </div>
     </div>
 </section>
+<section id="opening" class="opening">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <center class="teks"><img class="logo2" src="intro-logo.png">
+                    <br/><h1>Hackathon</h1><br/>
+                    <a class="button" href="#"><h4>Pendaftaran</h4></a> </center>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="bab1">
+    <div class="container">
+        <div class="row">
+            <div class="six columns"><center><img src="tanda tanya.png">
+            </div></center>
+            <div class="six columns">
+                <h3>Apa Itu UPC ?</h3>
+                    <p align="justify">
+                        UPC (UAJY Programming Competition) merupakan bagian dari event IFEST UAJY. Acara ini telah diselenggarakan sebelumnya pada tahun 2015 pada IFEST #3 untuk tingkat SMA/SMK/Sederajat Se-Jawa dan Bali. Acara ini direspon sangat baik oleh siswa-siswi tingkat SMA/SMK, maka kami memutuskan untuk kembali mengadakan UPC lagi pada IFEST #4 untuk tingkat SMA/SMK/Sederajat. Kegiatan ini diselenggarakan untuk mengembangkan kemampuan siswa-siswi SMA/SMK dan berharap dengan adanya kompetisi ini siswa-siswi menjadi tertarik dalam bidang teknologi informasi.
+                        UPC pada IFEST #4 ini bertemakan Code Rush. Peserta akan beradu kemampuan codingnya pada bahasa pemrograman C, C++, atau Pascal.
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="bab2">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns"><center><h2>TOTAL HADIAH</h2></center></div>
+            <div class="four columns"><center><img src="trophy-xxl.png"><br/><br/><br/><br/> <h1>JUARA 1</h1></center></div>
+            <div class="three columns"><center><img src="trophy-xxl.png"><br/><br/><br/><br/> <h1>JUARA 2</h1></center></div>
+            <div class="four columns"><center><img src="trophy-xxl.png"><br/><br/><br/><br/> <h1>JUARA 3</h1></center></div>
+        </div>
+    </div>
+</section>
 <section class="content"></section>
 <section class="content"></section>
 <section class="content"></section>
@@ -65,8 +101,17 @@ $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
         $('#site-menu').css('position', 'fixed');
         $('#site-menu').css('top', 0);
+        $('#site-menu').css('height',100);
+        $('#site-menu').css('z-index',2);
+        $('#site-menu').css('background-color', '#444');
+        $('#opening .teks').css('position','relative');
+        $('#opening .teks').css('top',159);
+        $('#opening').css('height',590)
     } else {
-        $('#site-menu').css('position', 'static');
+        $('.site-menu').css('position', 'static');
+        $('.opening .teks').css('position','relative');
+        $('.opening .teks').css('top', 55)
+        $('.opening').css('height',500);
     }
 });
 </script>
