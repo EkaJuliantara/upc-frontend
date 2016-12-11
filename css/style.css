@@ -1,40 +1,47 @@
 @font-face {
-    font-family: "Lato";
+    font-family: "CaviarDreams";
     font-style: normal;
     font-weight: normal;
-    src: url('../webfonts/Lato-Regular.ttf');
+    src: url('../webfonts/CaviarDreams.ttf');
 }
 
 @font-face {
-    font-family: "Lato";
+    font-family: "CaviarDreams";
     font-style: italic;
     font-weight: normal;
-    src: url('../webfonts/Lato-Italic.ttf');
+    src: url('../webfonts/CaviarDreams_Italic.ttf');
 }
 
 @font-face {
-    font-family: "Lato";
+    font-family: "CaviarDreams";
     font-style: normal;
     font-weight: bold;
-    src: url('../webfonts/Lato-Bold.ttf');
+    src: url('../webfonts/CaviarDreams_Bold.ttf');
 }
 
 @font-face {
-    font-family: "Lato";
+    font-family: "CaviarDreams";
     font-style: italic;
     font-weight: bold;
-    src: url('../webfonts/Lato-BoldItalic.ttf');
+    src: url('../webfonts/CaviarDreams_BoldItalic.ttf');
+}
+
+@@font-face {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-weight: normal;
+    src: url('../webfonts/BebasNeue Regular.ttf');
 }
 
 body {
-    background: #444;
-    font-family: "Lato", sans-serif;
+    background: #0a1a2e;
+    font-family: "CaviarDreams", "BebasNeue", sans-serif;
 }
 
 /* Header */
 
 .header {
-    background: #22313F;
+    background: #0a1a2e;
     height: 100px;
     padding: 10px 0;
     box-sizing: border-box;
@@ -71,6 +78,7 @@ body {
     height: 100px;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #bf3b2b;
 }
 
 .site-menu .logo {
@@ -132,9 +140,11 @@ body {
 /*bab1*/
 
 #bab1{
-    height: 250px;
+    height: 450px;
     position: static;
     box-sizing: border-box;
+    background-color: #8ccdbc;
+    padding: 50px 50px;
 }
 #bab1 img {
     width: 200px;
@@ -147,6 +157,7 @@ body {
 #bab2{
     box-sizing: border-box;
     margin-left: 0;
+    padding: 50px;
 }
 
 #bab2 img{
@@ -158,17 +169,20 @@ body {
 #bab2 .twelve{
     position: relative;
     left: 20px;
+    padding-bottom: 20px;
 }
 
 #bab2 .four{
     width:280px;
     height:450px;
     border-radius: 125px;
-    background-color: #fff000;
+    background-color: white;
+    color: black;
 }
 #bab2 .three{
     width:280px;
     height:450px;
     border-radius: 125px;
-    background-color: #fff000;
+    background-color: white;
+    color: black;
 }
