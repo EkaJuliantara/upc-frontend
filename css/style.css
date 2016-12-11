@@ -26,22 +26,25 @@
     src: url('../webfonts/CaviarDreams_BoldItalic.ttf');
 }
 
-@@font-face {
+@font-face {
     font-family: "BebasNeue";
     font-style: normal;
     font-weight: normal;
     src: url('../webfonts/BebasNeue Regular.ttf');
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family:  "BebasNeue" !important;
+}
+
 body {
-    background: #0a1a2e;
-    font-family: "CaviarDreams", "BebasNeue", sans-serif;
+    background: url('../stardust.png')#0a1a2e fixed;
+    font-family: "CaviarDreams";
 }
 
 /* Header */
 
 .header {
-    background: #0a1a2e;
     height: 100px;
     padding: 10px 0;
     box-sizing: border-box;
@@ -134,7 +137,7 @@ body {
 
 .opening .button{
     color: #ffffff;
-    background-color: #ff0000;
+    background-color: #bf3b2b;
 }
 
 /*bab1*/
@@ -152,23 +155,47 @@ body {
     position: static;
 }
 
+#bab1 .color{
+    color:black;
+}
+/*syarat*/
+#juduls {
+    padding: 30px 0 0 0;
+}
+#syarat{
+    padding: 50px 0;
+}
+.vr{
+    width:1px;
+    background-color:white;
+    position: absolute;
+    top:0;
+    bottom:0;
+    height: auto;
+    left:250px;
+    margin: 0 50px
+}
+
 /*bab2*/
 
 #bab2{
     box-sizing: border-box;
     margin-left: 0;
     padding: 50px;
+    background-color: #8ccdbc;
 }
 
 #bab2 img{
     position: relative;
     top: 50px;
-    width: 250px;
+    width: 175px;
+    margin: 25px 0;
 }
 
 #bab2 .twelve{
     position: relative;
     left: 20px;
+    color: black;
     padding-bottom: 20px;
 }
 
@@ -185,4 +212,57 @@ body {
     border-radius: 125px;
     background-color: white;
     color: black;
+}
+
+#bab2 h4{
+    font-size: 20px;
+}
+
+/*timeline*/
+#judulj {
+    padding: 30px 0 0 0;
+}
+
+#cd-timeline .cd-date {
+    color: white;
+    font-size: 20px;
+}
+
+#cd-timeline h2{
+    font-size: 30px;
+}
+#cd-timeline p {
+    font-size: 20px;
+}
+
+
+/*bab3*/
+
+#bab3 {
+    padding: 50px 0;
+    background: url('../paralax.jpg');
+    background-attachment: fixed;
+    background-position: fixed;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100% 700px;
+}
+#bab3 .button{
+    width: 300px;
+    height: auto;
+    background-color:#bf3b2b;
+}
+#bab3 .register-btn {
+    font-size: 18px;
+    padding: 15px 0;
+    color: white;
+}
+
+/*penutup */
+
+#penutup {
+    padding: 50px 0;
+}
+#penutup img{
+    width: 50px;
 }
