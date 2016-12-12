@@ -37,7 +37,8 @@
     .sr #opening
     .sr #syarat
     .sr #juduls
-    .sr #judulj { visibility: hidden; }
+    .sr #judulj
+    .sr #cd-timeline{ visibility: hidden; }
 
     /* add perspective to your container */
     #bab1 .container { perspective: 800px; }
@@ -263,6 +264,7 @@
  sr.reveal( "#juduls .columns", { reset: true, viewOffset: { top: 64 } } );
   sr.reveal( "#judulj .columns", { reset: true, viewOffset: { top: 64 } } );
    sr.reveal( "#syarat .columns", { reset: true, viewOffset: { top: 64 } } );
+   sr.reveal( "#cd-timeline .cd-timeline-block", { reset: true, viewOffset: {top: 64} } );
      function addCommasToNum( num ){
        return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "," );
      }
@@ -277,6 +279,7 @@
     var juduls  = document.querySelector("#juduls");
      var judulj  = document.querySelector("#judulj");
       var syarat  = document.querySelector("#syarat");
+      var timeline = document.querySelector("#cd-timeline");
 
      window.addEventListener( "scroll", scrollBrain, false );
 
@@ -310,6 +313,9 @@
         return crown.classList.add("visible")
       }
       if ( window.pageYOffset >= syarat.offsetTop + 64 ){
+        return crown.classList.add("visible")
+      }
+      if ( window.pageYOffset >= timeline.offsetTop + 64 ){
         return crown.classList.add("visible")
       }
       if ( window.pageYOffset >= 0.85 * ( height - window.clientHeight ) ) {
