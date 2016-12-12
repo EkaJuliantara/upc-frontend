@@ -286,7 +286,7 @@ To lint, test and minify the project, simply run the following command:
 
 Each of the build steps are also available individually.
 
-`$ grunt test` to test the code using QUnit and PhantomJS: 
+`$ grunt test` to test the code using QUnit and PhantomJS:
 
 `$ grunt lint` to validate the code using JSHint.
 
