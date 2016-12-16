@@ -22,9 +22,17 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="scrollreveal-master/dist/scrollreveal.js"></script>
   <script src="scrollreveal-master/dist/scrollreveal.min.js"></script>
+  <script src="stellar.js-master/src/jquery.stellar.js"></script>
+  <script src="stellar.js-master/jquery.stellar.min.js"></script>
+  <script src="stellar.js-master/jquery/jquery-2.0.2.js"></script>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script>
     window.sr = ScrollReveal();
+  </script>
+  <script>
+  $.stellar({
+        scrollProperty: 'transform';
+  });
   </script>
 
   <style>
@@ -43,9 +51,13 @@
     /* add perspective to your container */
     #bab1 .container { perspective: 800px; }
 
+    body{
+        background-position: 50% 0;
+        position: relative;
+    }
   </style>
  </head>
-<body>
+<body data-stellar-background-rasio="0.5" >
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -281,48 +293,13 @@
       var syarat  = document.querySelector("#syarat");
       var timeline = document.querySelector("#cd-timeline");
 
-     window.addEventListener( "scroll", scrollBrain, false );
+     //window.addEventListener( "scroll", scrollBrain, false );
 
      var body = document.body,
          html = document.documentElement;
 
      var height = Math.max( body.scrollHeight, body.offsetHeight,
                             html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-     function scrollBrain(){
-
-       if ( window.pageYOffset >= bab1.offsetTop + 64 ){
-         return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= bab2.offsetTop + 64 ){
-            return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= bab3.offsetTop + 64 ){
-            return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= penutup.offsetTop + 64 ){
-            return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= opening.offsetTop + 64 ){
-        return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= juduls.offsetTop + 64 ){
-        return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= judulj.offsetTop + 64 ){
-        return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= syarat.offsetTop + 64 ){
-        return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= timeline.offsetTop + 64 ){
-        return crown.classList.add("visible")
-      }
-      if ( window.pageYOffset >= 0.85 * ( height - window.clientHeight ) ) {
-         _gaq.push([ '_trackEvent', 'Behavior', 'Scroll', 'Viewed the entire page.']);
-       }
-     }
-
    </script>
    <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -364,13 +341,11 @@ $(document).on('click', '.menu-link', function (e) {
 </script>
 <script src="vertical-timeline/js/main.js"></script>
 <script src="vertical-timeline/js/modernizr.js"></script>
-<script src="stellar.js-master/jquery.stellar.js"></script>
-<script src="stellar.js-master/jquery.stellar.min.js"></script>
 <script>
-$(function(){
-        $('#bab3').stellar({
+$(function scrollBrain(){
+        $('#bab3 .parbg').stellar({
             horizontalScrolling: false,
-            verticalOffset: 40,
+            verticalOffset: 40
         });
 });
 </script>
