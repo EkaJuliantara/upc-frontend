@@ -76,7 +76,7 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <img class="logo" src="Logo UPC.png">
+                <a href="#"><img class="logo" src="Logo UPC.png"></a>
                 <nav class="menu">
                     <ul>
                         <li><a class="menu-link" href="#opening" data-top="290">Home</a></li>
@@ -96,7 +96,7 @@
             <div class="twelve columns">
                 <center class="teks"><img class="logo2" src="Logo UPC.png">
                     <br/><h1>Hackathon</h1><br/>
-                    <a class="button" href="#"><h4>Pendaftaran</h4></a> </center>
+                    <a class="button" href="#">Pendaftaran</a> </center>
             </div>
         </div>
     </div>
@@ -238,7 +238,6 @@
     </div> -->
 </section> <!-- cd-timeline -->
 <section id="bab3" >
-    <div class="parbg" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="twelve columns ">
@@ -246,7 +245,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <section id="penutup">
     <div class="container">
@@ -315,10 +313,9 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script>
 $(window).scroll(function () {
-    if ($(window).scrollTop() > 100) {
+    if ($(window).scrollTop() > 80) {
         $('#site-menu').css('position', 'fixed');
         $('#site-menu').css('top', 0);
-        $('#site-menu').css('height',100);
         $('#site-menu').css('z-index',2);
         $('#site-menu').css('background-color', '#bf3b2b');
         $('#opening .teks').css('position','relative');
@@ -341,6 +338,7 @@ $(document).on('click', '.menu-link', function (e) {
 </script>
 <script src="vertical-timeline/js/main.js"></script>
 <script src="vertical-timeline/js/modernizr.js"></script>
+<<<<<<< HEAD
 <script>
 $(function scrollBrain(){
         $('#bab3 .parbg').stellar({
@@ -349,6 +347,8 @@ $(function scrollBrain(){
         });
 });
 </script>
+=======
+>>>>>>> origin/master
 
 </body>
 </html>
