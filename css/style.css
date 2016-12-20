@@ -38,27 +38,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-<<<<<<< HEAD
     background-color: #0a1a2e;
     background-image: url('../stardust.png');
     background-attachment: fixed;
-=======
     background: url('../stardust.png')#0a1a2e;
->>>>>>> origin/master
     font-family: "CaviarDreams";
 }
 
+a{
+    display: block;
+        color: #fff ;
+}
 /* Header */
 
 .header {
-    padding: 10px 0;
+    padding: 20px 0;
     box-sizing: border-box;
 }
 
 .site-title {
-    display: block;
-    width: 100%;
-    color: #fff;
     text-align: center;
 }
 
@@ -97,11 +95,13 @@ body {
     position: relative;
     top: 10px;
     float: right;
+
 }
 
 .site-menu .menu ul > li {
     display: inline-block;
     margin: 0 -4px 0 0;
+
 }
 
 .site-menu .menu ul > li a {
@@ -111,7 +111,6 @@ body {
     line-height: 18px;
     padding: 11px 20px;
     text-decoration: none;
-    color: #fff;
 }
 
 /* Content */
@@ -124,13 +123,13 @@ body {
 
 .opening {
     position: relative;;
-    height: 500px;
+    height: 515px;
     display: block;
 }
 
 #opening .teks{
         position: relative;
-        top: 55px;S
+        top: 55px;
 }
 .opening .logo2{
     display: block;
@@ -138,14 +137,15 @@ body {
 }
 
 .opening .button{
-    color: #ffffff;
     background-color: #bf3b2b;
     margin: 0;
     padding: 10px 15px;
     line-height: inherit;
     font-size: 16px;
     height: auto;
+
 }
+
 
 /*bab1*/
 
@@ -179,7 +179,7 @@ body {
     top:0;
     bottom:0;
     height: auto;
-    left:250px;
+    left: 250px;
     margin: 0 50px
 }
 
@@ -245,13 +245,12 @@ body {
 
 /*bab3*/
 
-#bab3 {
+.bab3 {
+    background: #0a1a2e;
     background-image: url(../paralax.jpg);
     background-repeat: no-repeat;
-    background-position: center;
     background-attachment: fixed;
-    position: relative;
-    background-size: 100% 400px ;
+    background-size: 100% 700px ;
 
 }
 #bab3 .button{
@@ -274,4 +273,91 @@ body {
 }
 #penutup img{
     width: 50px;
+}
+
+/*reveal*/
+
+    /* Ensure elements load hidden before ScrollReveal runs */
+    .sr #bab1
+    .sr #bab2
+    .sr #bab3
+    .sr #penutup
+    .sr #opening
+    .sr #syarat
+    .sr #juduls
+    .sr #judulj
+    .sr #cd-timeline{ visibility: hidden; }
+
+    /* add perspective to your container */
+    #bab1 .container { perspective: 800px; }
+
+    body{
+        background-position: 50% 0;
+        position: relative;
+    }
+
+
+#pendaftaran .breadcrumb {
+	float:right;
+	background:transparent;
+	margin-top:0;
+	margin-bottom:0;
+	padding:7px 5px;
+	position:absolute;
+	top:15px;
+	right:10px;
+	border-radius:2px
+}
+#pendaftaran .breadcrumb li {
+	color:white;
+	list-style:none;
+	display:inline-block;
+}
+
+
+#pendaftaran .breadcrumb>li+li:before {
+	content:'>\00a0'
+}
+
+.section-title {
+    margin-top:5px;
+}
+
+/*form*/
+
+.vr2{
+    width:1px;
+    background-color:white;
+    position: absolute;
+    top:0;
+    bottom:0;
+    height: auto;
+    left: 1px;
+    margin: 0 0px
+}
+
+#syarat .srt{
+    margin-left: 30px;
+}
+
+#syarat .juduls2{
+    background-position: fixed;
+}
+
+.form-control {
+    width: 100%;
+}
+
+#gab button{
+    background-color: #bf3b2b;
+    margin: 0;
+    padding: 10px 15px;
+    line-height: inherit;
+    font-size: 16px;
+    height: auto;
+
+}
+
+input {
+    color: black;
 }
