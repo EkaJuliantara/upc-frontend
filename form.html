@@ -47,16 +47,15 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <a href="#"><img class="logo" src="Logo UPC.png"></a>
+                <a href="index.html"><img class="logo" src="Logo UPC.png"></a>
                 <nav class="menu">
                     <ul>
-                        <li><a class="menu-link" href="#opening" data-top="290">Home</a></li>
-                        <li><a class="menu-link" href="#bab1" data-top="740">About UPC</a></li>
-                        <li><a class="menu-link" href="#bab2" data-top="1610">Prizes</a></li>
-                        <li><a class="menu-link" href="#bab3" data-top="3000">Registration</a></li>
+                        <li><a class="menu-home" href="index.html#opening" >Home</a></li>
+                        <li><a class="menu-upc" href="index.html#bab1" >About UPC</a></li>
+                        <li><a class="menu-prize" href="index.html#bab2" >Prizes</a></li>
+                        <li><a class="menu-reg" href="index.html#bab3" >Registration</a></li>
                     </ul>
                 </nav>
-                <div class="u-cf"></div>
             </div>
         </div>
     </div>
@@ -114,8 +113,8 @@
                     </div>
                 </div>
             </div>
-            <div class="six columns">
-                    <section id="juduls">
+            <div class="six columns kiri">
+                    <section id="juduls2">
                         <div class="container">
                             <div class="row">
                                 <div class="twelve columns">
@@ -124,24 +123,23 @@
                                 </div>
                             </div>
                         </section>
-                    <section id="syarat">
+                    <section id="syarat2">
                         <div class="container">
                             <div class="row">
 
                                 <div class="twelve columns">
-                                        <p align="justify">
+
                                             <span class="vr2">&nbsp;</span>
                                     <ol  class="srt">
-                                        <li>Lorem ipsum dolor sit amet</li>
-                                        <li>Aliquam id suscipit nunc, eu auctor nisi.</li>
-                                        <li>tempus in iaculis sed, posuere et nulla.
-                                        </li>
-                                        <li>Etiam tristique eu lorem at cursus.
-                                        </li>
-                                        <li>it. Nam et ligula ut diam facilisis sagittis.
-                                        </il>
+
+                                            <li>Merupakan mahasiswa/i aktif tingkat S1/D3/D4 </li>
+                                            <li>Membentuk sebuah tim yang beranggotakan maksimal 5 orang</li>
+                                            <li>Setiap Universitas diperbolehkan mengirim lebih dari 1 tim </li>
+                                            <li>Satu tim wajib memiliki 1 dosen pembimbing dari Universitas yang bersangkutan</li>
+                                            <li>Dosen diperbolehkan membimbing lebih dari 1 tim selama masih berasal dari kampus yang sama dengan tim </li>
+                                            <li>Setiap tim membawa minimal 1 buah laptop untuk pengerjaan</li>
                                     </ol>
-                                    </p>
+
                                 </div>
                             </div>
                         </div>
@@ -157,11 +155,11 @@
     <div class="container">
         <div class="row">
             <div class="six columns">
-                <center><h3>CONTACT PERSON</h3><br/><h4>asal aja tapi jangan terlalu asal</h4></center>
+                <center><h3 >CONTACT PERSON</h3></center><br/><ul class="bullet"><li>Ryandi (0856-8269-6878)</li><li>Dio (0878-3992-2155)</li></ul>
             </div>
             <div class="six columns">
-                <center><h3>Follow Us</h3><br/>
-                <img src="./images/fb.png"> <img src="./images/tw.png"> <img src="./images/ln.png"> <img src="./images/ins.png"></center>
+                <center><h3>Follow Us</h3></center><br/>
+                <center class="gambar"><img src="./images/ln.png" ><font size="5px" style="position: relative; top: -13px;">@ykb2847</font> </center>
             </div>
         </div>
     </div>
@@ -209,7 +207,7 @@ $(window).scroll(function () {
         $('#site-menu').css('z-index',2);
         $('#site-menu').css('background-color', '#bf3b2b');
         $('#pendaftaran').css('position','relative');
-        $('#pendaftaran').css('top',102);
+        $('#pendaftaran').css('top',99);
         $('#pendaftaran').css('height', 170)
     } else {
         $('.site-menu').css('position', 'static');
@@ -217,13 +215,6 @@ $(window).scroll(function () {
         $('#pendaftaran').css('top', 5)
         $('#pendaftaran').css('height',80);
     }
-});
-$(document).on('click', '.menu-link', function (e) {
-    e.preventDefault();
-
-    var location = parseInt($(this).attr('data-top')) - 150;
-
-    $("html, body").animate({ scrollTop: location }, "slow");
 });
 </script>
 </body>
