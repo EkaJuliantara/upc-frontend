@@ -66,7 +66,9 @@
             <div class="twelve columns">
                 <center class="teks">
                     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><h2 class="bg1">"CODE FOR UNITY"</h2>
-                    <a  href="form.html" class="button">Pendaftaran</a> </center>
+                    <div class="register-btn-change">
+                    <a  href="form.html" class="register-btn">Pendaftaran</a> </div></center>
+
             </div>
         </div>
     </div>
@@ -167,50 +169,14 @@
             <span class="cd-date">13 Mei 2017</span>
         </div> <!-- cd-timeline-content -->
     </div> <!-- cd-timeline-block -->
-<!--
-    <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-location">
-            <img src="../img/cd-icon-location.svg" alt="Location">
-        </div>
-
-        <div class="cd-timeline-content">
-            <h2>Title of section 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Feb 14</span>
-        </div>
-    </div>
-
-    <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-location">
-            <img src="../img/cd-icon-location.svg" alt="Location">
-        </div>
-
-        <div class="cd-timeline-content">
-            <h2>Title of section 5</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Feb 18</span>
-        </div>
-    </div>
-
-    <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-movie">
-            <img src="../img/cd-icon-movie.svg" alt="Movie">
-        </div>
-
-        <div class="cd-timeline-content">
-            <h2>Final Section</h2>
-            <p>This is the content of the last section</p>
-            <span class="cd-date">Feb 26</span>
-        </div>
-    </div> -->
 </section> <!-- cd-timeline -->
-<section id="bab3" class="bab3" data-stellar-background-ratio="0.5">
+<section id="bab3" class="bab3">
         <div class="container">
             <div class="row">
                 <div class="twelve columns ">
-                    <center><a href="form.html" class="button register-btn" > DAFTAR SEKARANG</a></center>
+                    <center><div class="register-btn2-change">
+                    <a href="form.html" class="register-btn2" > DAFTAR SEKARANG</a>
+                </div></center>
                 </div>
             </div>
         </div>
@@ -249,26 +215,6 @@
      }
 
    </script>
-   <script>
-   var bab1  = document.querySelector("#bab1");
-   var bab2  = document.querySelector("#bab2");
-   var bab3  = document.querySelector("#bab3");
-   var opening  = document.querySelector("#opening");
-   var penutup  = document.querySelector("#penutup");
-    var juduls  = document.querySelector("#juduls");
-     var judulj  = document.querySelector("#judulj");
-      var syarat  = document.querySelector("#syarat");
-      var timeline = document.querySelector("#cd-timeline");
-
-     //window.addEventListener( "scroll", scrollBrain, false );
-
-     var body = document.body,
-         html = document.documentElement;
-
-     var height = Math.max( body.scrollHeight, body.offsetHeight,
-                            html.clientHeight, html.scrollHeight, html.offsetHeight );
-   </script>
-
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script>
@@ -300,12 +246,8 @@ $(document).on('click', '.menu-link', function (e) {
 </script>
 <script src="vertical-timeline/js/main.js"></script>
 <script src="vertical-timeline/js/modernizr.js"></script>
-<script src="stellar.js-master/jquery.stellar.min.js"></script>
-<script src="stellar.js-master/jqurey.stellar.js"></script>
 <script src="stellar.js-master/libs/jquery/jquery-2.0.2.js"></script>
-<script>
-$('#bab3').stellar();
-</script>
+
 
 </body>
 </html>
