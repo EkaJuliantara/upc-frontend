@@ -180,6 +180,13 @@ a{
     top: -25px;
     z-index: 1;
 }
+
+#opening2 img{
+    width: 140px;
+    position: relative;
+    top: 37px;
+    left: 3.8px;
+}
 .opening .logo2{
     display: block;
     width: 200px;
@@ -188,10 +195,10 @@ a{
     left: 15px;
 }
 
-.opening .button{
-    background-color: #BF3B2B;
+a.register-btn{
+    background-color: #F8DEA3;
     border-radius: 125px;
-    color: white;
+    color: black;
     margin: 0;
     padding: 15px 20px;
     line-height: inherit;
@@ -199,8 +206,17 @@ a{
     position: relative;
     top: 5px;
     height: auto;
-
 }
+
+div.register-btn-change:hover a.register-btn{
+    background: #bf3b2b;
+    color: white;
+}
+
+div.register-btn-change{
+    width: 150px;
+}
+
 
 
 /*bab1*/
@@ -327,18 +343,26 @@ a{
     background-size: 100% 700px ;
 
 }
-#bab3 .button{
+a.register-btn2{
     width: 300px;
     height: auto;
-    background-color:#bf3b2b;
-}
-#bab3 .register-btn {
+    background-color:#F8DEA3;
     font-size: 18px;
     margin: 60px 0;
     padding: 15px 0;
-    color: white;
+    color: black ;
     border-radius: 125px;
 }
+
+div.register-btn2-change:hover a.register-btn2{
+    background: #bf3b2b;
+    color: white;
+}
+
+div.register-btn2-change{
+    width: 300px;
+}
+
 
 /*penutup */
 
@@ -486,4 +510,18 @@ a{
 
 input {
     color: black;
+}
+
+button.register-btn3{
+    background-color: #F8DEA3 !important;
+    color: black;
+}
+
+div.register-btn3-change:hover button.register-btn3 {
+    background: #bf3b2b !important;
+    color: white;
+}
+
+div.register-btn3-change{
+    width: 100px;
 }
