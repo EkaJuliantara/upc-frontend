@@ -112,6 +112,16 @@ a{
     text-decoration: none;
 }
 
+.site-menu .closebtn{
+    visibility: hidden;
+    position: fixed;
+}
+
+.site-menu span{
+    visibility: hidden;
+    position: fixed;
+}
+
 /* Content */
 
 .content {
