@@ -131,23 +131,21 @@ a{
 /* opening */
 
 .opening {
-    position: relative;;
-    height: 515px;
+    position: relative;
     display: block;
 }
 
 #opening .teks{
         position: relative;
-        top: 55px;
+        /*top:346px;*/
 }
 #opening2 .teks{
         position: relative;
-        top: 55px;
+        /*top: 346px;*/
 }
 #opening {
     background-image: url(../head.png);
     background-repeat: no-repeat;
-    background-position: 0 25px;
     background-size: 100%;
 }
 
@@ -166,7 +164,6 @@ a{
         background-color: white;
         color: #bf3b2b;
         position: relative;
-        top: 15px;
 }
 
 #opening2 .bg1{
@@ -210,12 +207,8 @@ a.register-btn{
     border-radius: 125px;
     color: black;
     margin: 0;
-    padding: 15px 20px;
     line-height: inherit;
-    font-size: 16px;
     position: relative;
-    top: 5px;
-    height: auto;
 }
 
 div.register-btn-change:hover a.register-btn{
@@ -307,18 +300,26 @@ div.register-btn-change{
 }
 
 #bab2 .four{
-    width:280px;
     height:450px;
     border-radius: 125px;
     background-color:#F8DA80;
     color: black;
 }
-#bab2 .three{
-    width:280px;
-    height:450px;
-    border-radius: 125px;
-    background-color: #F8DA80;
-    color: black;
+
+#bab2 .kiri{
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#bab2 .tengah{
+    margin-left: 23px;
+}
+
+#bab2 .kanan{
+    float: right;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 
 #bab2 h4{
