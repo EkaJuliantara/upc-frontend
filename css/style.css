@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "CaviarDreams";
     font-style: normal;
@@ -120,6 +121,8 @@ a{
 .site-menu span{
     visibility: hidden;
     position: fixed;
+    font-size:20px;
+    cursor:pointer;
 }
 
 /* Content */
@@ -133,27 +136,29 @@ a{
 .opening {
     position: relative;
     display: block;
+    height: 550px;
 }
 
 #opening .teks{
         position: relative;
-        /*top:346px;*/
+        top:346px;
 }
 #opening2 .teks{
         position: relative;
-        /*top: 346px;*/
+        top: 55px;
 }
 #opening {
     background-image: url(../head.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: 0 25px;
 }
 
 #opening2 {
     background-image: url(../head2.png);
     background-repeat: no-repeat;
-    background-position: 0 25px;
-    background-size: 100%;
+    background-position: center 25px;
+    background-size: 1355px;
     z-index: 1;
 }
 
@@ -164,6 +169,7 @@ a{
         background-color: white;
         color: #bf3b2b;
         position: relative;
+        top: 15px;
 }
 
 #opening2 .bg1{
@@ -191,8 +197,8 @@ a{
 #opening2 img{
     width: 140px;
     position: relative;
-    top: 37px;
-    left: 3.8px;
+    top: 36px;
+    left: 3px;
 }
 .opening .logo2{
     display: block;
@@ -209,6 +215,9 @@ a.register-btn{
     margin: 0;
     line-height: inherit;
     position: relative;
+    padding: 10px 20px;
+    height: 50px;
+    width: 150px;
 }
 
 div.register-btn-change:hover a.register-btn{
@@ -232,13 +241,13 @@ div.register-btn-change{
     padding: 50px 50px;
 }
 #bab1 img {
+    position: static;
     width: 200px;
     height: 350px;
-    position: static;
 }
 
-#bab1 .color{
-    color:black;
+#bab1 .color {
+    color: black;
 }
 /*syarat*/
 #juduls h2{
@@ -262,7 +271,7 @@ div.register-btn-change{
     top:0;
     bottom:0;
     height: auto;
-    left: 190px;
+    left: 15%;
     margin: 0 50px
 }
 
@@ -294,7 +303,6 @@ div.register-btn-change{
 
 #bab2 .twelve{
     position: relative;
-    left: 20px;
     color: black;
     padding-bottom: 20px;
 }
@@ -303,25 +311,9 @@ div.register-btn-change{
     height:450px;
     border-radius: 125px;
     background-color:#F8DA80;
+    background-position: center;
     color: black;
 }
-
-#bab2 .kiri{
-    float: left;
-    margin-left: 5px;
-    margin-right: 10px;
-}
-
-#bab2 .tengah{
-    margin-left: 23px;
-}
-
-#bab2 .kanan{
-    float: right;
-    margin-left: 10px;
-    margin-right: 5px;
-}
-
 #bab2 h4{
     font-size: 20px;
 }
@@ -351,7 +343,8 @@ div.register-btn-change{
     background-image: url(../paralax.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 700px ;
+    background-position: 0 1400px;
+    background-size: 100% 800px ;
 
 }
 a.register-btn2{
@@ -414,7 +407,6 @@ div.register-btn2-change{
     background-color: #F8DA80;
     border-radius: 25px;
     width: 400px;
-    height: 50px;
     color: black;
     margin: 0;
     padding: 45px 20px;
