@@ -18,10 +18,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="scrollreveal-master/dist/scrollreveal.js"></script>
   <script src="scrollreveal-master/dist/scrollreveal.min.js"></script>
+
   <link rel="icon" type="image/png" href="images/favicon.png">
   <script>
     window.sr = ScrollReveal();
@@ -47,111 +49,115 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <a href="index.html"><img class="logo" src="Logo UPC.png"></a>
-                <nav class="menu">
+                <a href="#"><img class="logo" src="Logo UPC.png"></a>
+                <nav class="menu" id="menu">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <ul>
-                        <li><a class="menu-home" href="index.html#opening" >Home</a></li>
-                        <li><a class="menu-upc" href="index.html#bab1" >About UPC</a></li>
-                        <li><a class="menu-prize" href="index.html#bab2" >Prizes</a></li>
-                        <li><a class="menu-reg" href="index.html#bab3" >Registration</a></li>
+                        <li><a class="menu-link" href="#opening" data-top1="260">Home</a></li>
+                        <li><a class="menu-link" href="#bab1" data-top2="800">About UPC</a></li>
+                        <li><a class="menu-link" href="#bab2" data-top3="1720">Prizes</a></li>
+                        <li><a class="menu-link" href="#bab3" data-top4="3230">Registration</a></li>
                     </ul>
                 </nav>
+                <span onclick="openNav()">&#9776;<a href="#"><img class="logo2" src="Logo UPC.png"></a></span>
             </div>
         </div>
     </div>
 </section>
-<section id="pendaftaran">
-    <div class="container">
-        <div class="row">
-            <div class="six columns">
-                <h3 class="section-title">Pendaftaran</h3>
-            </div>
-            <div class="six columns">
-                <ol class="breadcrumb">
-                    <li>
-                        <a href="index.html">
-                        Home
-                        </a>
-                    </li>
-                    <li class="active">
-                        Pendaftaran
-                    </li>
-                </ol>
+<section id="isi">
+
+    <section id="pendaftaran">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <h3 class="section-title">Pendaftaran</h3>
+                </div>
+                <div class="six columns">
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">
+                            Home
+                            </a>
+                        </li>
+                        <li class="active">
+                            Pendaftaran
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section id="gab">
-    <div class="container">
-        <div class="row">
-            <div class="six columns">
-                <div class="section register" data-anchor="register-form">
+    </section>
+    <section id="gab">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="section register" data-anchor="register-form">
 
-                        <form method="POST">
-                            <div class="form-group">
-                                <label for="email">Email (Email Ketua Tim/Perwakilan)</label>
-                                <input  class="form-control" type="email" name="email" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="school">Asal Sekolah</label>
-                                <input class="form-control" type="text" name="school" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="team_name">Nama Tim</label>
-                                <input class="form-control" type="text" name="team_name" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Kata Sandi</label>
-                                <input  class="form-control" type="password" name="password" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="password_conf">Kata Sandi (konfirmasi)</label>
-                                <input  class="form-control" type="password" name="password_conf" required />
-                            </div>
-                            <div class="register-btn3-change">
-                            <button class="register-btn3" type="submit" >Daftar</button></div>
-                        </form>
-                    </div>
-
-            </div>
-            <div class="six columns kiri">
-                    <section id="juduls2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="twelve columns">
-                                    <center><h2>Syarat dan Ketentuan </h2></center>
+                            <form method="POST">
+                                <div class="form-group">
+                                    <label for="email">Email (Email Ketua Tim/Perwakilan)</label>
+                                    <input  class="form-control" type="email" name="email" required />
                                 </div>
+                                <div class="form-group">
+                                    <label for="school">Asal Sekolah</label>
+                                    <input class="form-control" type="text" name="school" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="team_name">Nama Tim</label>
+                                    <input class="form-control" type="text" name="team_name" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Kata Sandi</label>
+                                    <input  class="form-control" type="password" name="password" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password_conf">Kata Sandi (konfirmasi)</label>
+                                    <input  class="form-control" type="password" name="password_conf" required />
+                                </div>
+                                <div class="register-btn3-change">
+                                <button class="register-btn3" type="submit" >Daftar</button></div>
+                            </form>
+                        </div>
+
+                </div>
+                <div class="six columns kiri">
+                        <section id="juduls2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="twelve columns">
+                                        <center><h2>Syarat dan Ketentuan </h2></center>
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+                        <section id="syarat2">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="twelve columns">
+
+                                                <span class="vr2">&nbsp;</span>
+                                        <ol  class="srt">
+
+                                                <li>Merupakan mahasiswa/i aktif tingkat S1/D3/D4 </li>
+                                                <li>Membentuk sebuah tim yang beranggotakan maksimal 5 orang</li>
+                                                <li>Setiap Universitas diperbolehkan mengirim lebih dari 1 tim </li>
+                                                <li>Satu tim wajib memiliki 1 dosen pembimbing dari Universitas yang bersangkutan</li>
+                                                <li>Dosen diperbolehkan membimbing lebih dari 1 tim selama masih berasal dari kampus yang sama dengan tim </li>
+                                                <li>Setiap tim membawa minimal 1 buah laptop untuk pengerjaan</li>
+                                        </ol>
+
+                                    </div>
                                 </div>
                             </div>
                         </section>
-                    <section id="syarat2">
-                        <div class="container">
-                            <div class="row">
 
-                                <div class="twelve columns">
+                    </div>
 
-                                            <span class="vr2">&nbsp;</span>
-                                    <ol  class="srt">
-
-                                            <li>Merupakan mahasiswa/i aktif tingkat S1/D3/D4 </li>
-                                            <li>Membentuk sebuah tim yang beranggotakan maksimal 5 orang</li>
-                                            <li>Setiap Universitas diperbolehkan mengirim lebih dari 1 tim </li>
-                                            <li>Satu tim wajib memiliki 1 dosen pembimbing dari Universitas yang bersangkutan</li>
-                                            <li>Dosen diperbolehkan membimbing lebih dari 1 tim selama masih berasal dari kampus yang sama dengan tim </li>
-                                            <li>Setiap tim membawa minimal 1 buah laptop untuk pengerjaan</li>
-                                    </ol>
-
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-
+            </div>
         </div>
-    </div>
+    </section>
 </section>
-
 <section id="penutup">
     <div class="container">
         <div class="row">
@@ -182,41 +188,8 @@
      }
 
    </script>
-   <script>
-   var pendaftaran  = document.querySelector("#opeing");
-   var penutup  = document.querySelector("#penutup");
-    var juduls  = document.querySelector("#juduls");
-      var syarat  = document.querySelector("#syarat");
-      var gab = document.querySelector("#gab");
-
-     //window.addEventListener( "scroll", scrollBrain, false );
-
-     var body = document.body,
-         html = document.documentElement;
-
-     var height = Math.max( body.scrollHeight, body.offsetHeight,
-                            html.clientHeight, html.scrollHeight, html.offsetHeight );
-   </script>
-
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script>
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 100) {
-        $('#site-menu').css('position', 'fixed');
-        $('#site-menu').css('top', 0);
-        $('#site-menu').css('z-index',2);
-        $('#site-menu').css('background-color', '#bf3b2b');
-        $('#pendaftaran').css('position','relative');
-        $('#pendaftaran').css('top',99);
-        $('#pendaftaran').css('height', 170)
-    } else {
-        $('.site-menu').css('position', 'static');
-        $('#pendaftaran').css('position','relative');
-        $('#pendaftaran').css('top', 5)
-        $('#pendaftaran').css('height',80);
-    }
-});
-</script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/style.js"></script>
+ <script src="js/menu.js"> </script>
 </body>
 </html>
