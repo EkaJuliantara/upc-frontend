@@ -1,7 +1,11 @@
+$(".menu").hide();
+
 function openNav() {
- document.getElementById("menu").style.width = "175px";
+    $(".menu").slideToggle("slow");
+    $(".menu").show();
 }
 
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
- document.getElementById("menu").style.width = "0";
+    $(".menu").slideToggle("slow");
 }
