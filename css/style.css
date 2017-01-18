@@ -124,6 +124,9 @@ a{
     font-size:20px;
     cursor:pointer;
 }
+.site-menu .logo2{
+    display: none;
+}
 
 /* Content */
 
