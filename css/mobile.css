@@ -15,12 +15,19 @@
         display: block !important;
     }
     .site-menu .menu {
-        position: fixed ;
-        top: 0px ;
+        position: static;
         float: none ;
-        overflow-y: scroll;
 
     }
+    .menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#131313;  position:absolute; text-align:center;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
+.menu ul li a:hover {  color: #fff; text-decoration:none;}
+.menu a{text-decoration:none; color:white;}
+.menu a:hover{text-decoration:none; color:white;}
+
     .site-menu .logo {
         visibility: hidden;
         position: fixed;
@@ -40,10 +47,9 @@
         left: 15px;
         padding-bottom: 15px;
         }
+/*
     .menu {
         height: 100%;
-        width: 0;
-        position: fixed;
         z-index: 4;
         top: -5px;
         left: 0;
@@ -53,6 +59,7 @@
         padding-top: 15px;
     }
 
+
     .menu ul > li a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
@@ -61,7 +68,7 @@
         display: block;
         transition: 0.3s
     }
-
+*/
     .site-menu .closebtn {
         position: absolute;
         top: 0;
