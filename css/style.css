@@ -531,3 +531,8 @@ div.register-btn3-change:hover button.register-btn3 {
 div.register-btn3-change{
     width: 100px;
 }
+
+.pemberitahuan {
+    position: relative;
+    top: 162px;
+}
