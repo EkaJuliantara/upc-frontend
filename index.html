@@ -4,7 +4,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>UAJY Programming Competition</title>
+  <title>Hackfest</title>
   <meta name="description" content="UAJY Programming Competition">
   <meta name="author" content="Panitia IFEST #5 UAJY">
   <!-- Mobile Specific Metas
@@ -19,11 +19,14 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mobile.css">
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="vertical-timeline/js/main.js"></script>
   <script src="vertical-timeline/js/modernizr.js"></script>
+
  </head>
 <body >
 
@@ -34,9 +37,9 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <a href="#" class="site-title">
+                <center><a href="#" class="site-title">
                     <img src=logo-ifest.png><h1>Informatics Festival #5</h1>
-                </a>
+                </a></center>
             </div>
         </div>
     </div>
@@ -45,14 +48,16 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns">
-                <a href="#"><img class="logo" src="Logo UPC.png"></a>
+                <center>
+                <a href="#"><img class="logo" src="logo1.png"></a>
+            </center>
                 <div class="hamburger"><span><span class="openbtn" onclick="openNav()">&#9776;</span><span class="closebtn" onclick="closeNav()" >&#735;</span></span> <a href="#"><img class="logo2" src="Logo UPC.png"></a></div>
                 <nav class="menu" id="menu">
                     <ul>
-                        <li><a class="menu-link" href="#opening" data-top="260">Home</a></li>
-                        <li><a class="menu-link" href="#bab1" data-top="800">About UPC</a></li>
-                        <li><a class="menu-link" href="#bab2" data-top="1720">Prizes</a></li>
-                        <li><a class="menu-link" href="#bab3" data-top="3230">Registration</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#opening">Home</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#bab1" >About Hackfest</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#bab2" >Prizes</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="#bab3" >Registration</a></li>
                     </ul>
                 </nav>
 
@@ -68,7 +73,7 @@
                     <center class="teks">
                         <h2 class="bg1">"CODE FOR UNITY"</h2>
                         <div class="register-btn-change">
-                        <a  href="form.html" class="register-btn">Pendaftaran</a> </div></center>
+                        <a  href="form.html" class="register-btn">P E N D A F T A R A N</a> </div></center>
 
                 </div>
             </div>
@@ -80,15 +85,15 @@
                 <div class="six columns"><center><img src="tanya.png">
                 </div></center>
                 <div class="six columns color">
-                    <h3>Apa Itu UPC ?</h3>
+                    <h3>Apa Itu Hackfest ?</h3>
                         <p align="justify">
-                            UPC (UAJY Programming Competition) merupakan bagian dari event IFEST UAJY. Acara ini telah diselenggarakan sebelumnya pada tahun 2016 pada IFEST #4 untuk tingkat SMA/SMK/Sederajat Se-Jawa dan Bali. Namun pada IFEST#5 ini, pesertanya bukan lagi siswa-siswi SMA/SMK/Sederajat tetapi untuk mahasiswa S1/Sederajat seluruh Indonesia.
-                            UPC tahun ini memiliki tema "Code For Unity" dan lomba yang dilaksanakan pada tahun ini menggunakan konsep <strong>Hackathon</strong>.
+                            hackfest adalah singkatan dari hackathon i-fest, hackathon sendiri adalah sebuah perlombaan dimana kita akan memecahkan suatu masalah yang ada dikehidupan sehari - dengan sebuah terobosan baru melalui dunia IT secara kontinu selama 24 jam. Sedangkan untuk i-fest sendiri adalah acara tahunan yang diadakan oleh himpunan mahasiswa teknik informatika (Himaforka) sebagai acara andalan mereka.
                         </p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="bgsyarat">
     <section id="juduls">
         <div class="container">
             <div class="row">
@@ -104,29 +109,38 @@
                 <div class="vr">&nbsp;</div>
                 <div class="eight columns">
                     <ol>
-                        <li>Merupakan mahasiswa/i aktif tingkat S1/D3/D4 </li>
-                        <li>Membentuk sebuah tim yang beranggotakan maksimal 5 orang</li>
-                        <li>Setiap Universitas diperbolehkan mengirim lebih dari 1 tim </li>
-                        <li>Satu tim wajib memiliki 1 dosen pembimbing dari Universitas yang bersangkutan</li>
-                        <li>Dosen diperbolehkan membimbing lebih dari 1 tim selama masih berasal dari kampus yang sama dengan tim </li>
-                        <li>Setiap tim membawa minimal 1 buah laptop untuk pengerjaan</li>
+                        <li><strong>Merupakan mahasiswa/i aktif tingkat S1/D3/D4</strong> </li>
+                        <li><strong>Membentuk sebuah tim yang beranggotakan maksimal 5 orang</strong></li>
+                        <li><strong>Setiap Universitas diperbolehkan mengirim lebih dari 1 tim</strong> </li>
+                        <li><strong>Satu tim wajib memiliki 1 dosen pembimbing dari Universitas yang bersangkutan</strong></li>
+                        <li><strong>Dosen diperbolehkan membimbing lebih dari 1 tim selama masih berasal dari kampus yang sama dengan tim</strong> </li>
+                        <li><strong>Setiap tim membawa minimal 1 buah laptop untuk pengerjaan</strong></li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
+</section>
     <section id="bab2">
         <div class="container">
             <div class="row">
-                <div class="twelve columns"><center><h2>TOTAL HADIAH</h2></center></div>
+            <div class="twelve columns"><center><h2>TOTAL HADIAH</h2></center></div>
             </div>
+            <center>
             <div class="row tropi">
-                <div class="four columns kiri"><center><img src="trophy-gold.png"><br/><br/><br/><br/> <h2>JUARA 1</h2><h4>Rp 5.000.000 + Sertifikat</h4></center></div>
-                <div class="four columns tengah"><center><img src="trophy-silver.png"><br/><br/><br/><br/> <h2>JUARA 2</h2><h4>Rp 3.000.000 + Sertifikat</h4></center></div>
-                <div class="four columns kanan"><center><img src="trophy-broze.png"><br/><br/><br/><br/> <h2>JUARA 3</h2><h4>Rp 1.000.000 + Sertifikat</h4></center></div>
-            </div>
+                <div class="four columns kiri"><img src="trophy-gold.png"><br/><br/><br/><br/> <h2>JUARA 1</h2><h4><strong>Rp 6.000.000 + Piala + Sertifikat</strong></h4></div>
+                <div class="four columns tengah"><img src="trophy-silver.png"><br/><br/><br/><br/> <h2>JUARA 2</h2><h4><strong>Rp 4.000.000 + Piala + Sertifikat</strong></h4></div>
+                <div class="four columns kanan"><img src="trophy-broze.png"><br/><br/><br/><br/> <h2>JUARA 3</h2><h4><strong>Rp 2.000.000 + Piala + Sertifikat</strong></h4></div>
+            </div><br/>
+            <div class="row tropi">
+                <div class="three columns bgkategori"><img src="kategori.jpg"><br/><br/><h3>Juara Kategori Pemberdayaan Masyarakat</h3><h4><strong>Piala + Sertifikat</strong></h4></div>
+                <div class="three columns bgkategori"><img src="kategori.jpg"><br/><br/><h3>Juara Kategori Pendidikan<br/>&nbsp;</h3><h4><strong>Piala + Sertifikat</strong></h4></div>
+                <div class="three columns bgkategori"><img src="kategori.jpg"><br/><br/><h3>Juara Kategori Kebudayaan<br/>&nbsp;</h3><h4><strong>Piala + Sertifikat</strong></h4></div>
+                <div class="three columns bgkategori"><img src="kategori.jpg"><br/><br/><h3>Juara Kategori Other<br/>&nbsp;</h3><h4><strong>Piala + Sertifikat</strong></h4></div>
+            </div></center>
         </div>
     </section>
+<section class="bgjadwal">
     <section id="judulj">
         <div class="container">
             <div class="row">
@@ -139,40 +153,97 @@
     <section id="cd-timeline" class="cd-container">
         <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-picture">
-                <img src="img/cd-icon-picture.svg" alt="Picture">
+                <img src="icon/registration.png" alt="Picture">
             </div> <!-- cd-timeline-img -->
 
             <div class="cd-timeline-content">
-                <h2>Pendaftaran </h2>
-                <p>Biaya pendaftaran Rp. 250.000,00</p>
-                <span class="cd-date">11 February - 12 April 2017</span>
+                <h2>Pendaftaran</h2>
+                <p>Peserta mendaftar secara online</p>
+                <span class="cd-date">5 Maret – 2 April 2017</span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="icon/presentation.png" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Batas Pengumpulan Proposal </h2>
+                <p>Peserta mengumpulkan proposal</p>
+                <span class="cd-date">9 April 2017</span>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
 
         <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-                <img src="../img/cd-icon-movie.svg" alt="Movie">
+                <img src="icon/rate.png" alt="Picture">
             </div> <!-- cd-timeline-img -->
 
             <div class="cd-timeline-content">
-                <h2>Tahap 1</h2>
-                <p>Lomba tahap 1 di Gedung Santo Bonaventura Universitas Atma Jaya Yogyakarta</p>
-                <span class="cd-date">12 Mei 2017</span>
+                <h2>Seleksi Awal</h2>
+                <p>Proposal yang dikirimkan akan diseleksi</p>
+                <span class="cd-date">9 April – 16 April 2017</span>
             </div> <!-- cd-timeline-content -->
+                </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="icon/rate.png" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            <div class="cd-timeline-content">
+                <h2>Pengumuman Seleksi Awal</h2>
+                <p>Pengumuman seleksi awal di web ifest dan broadcast</p>
+                <span class="cd-date">17 April 2017</span>
+            </div> <!-- cd-timeline-content -->
+                </div> <!-- cd-timeline-block -->
+
+            <div class="cd-timeline-block">
+                <div class="cd-timeline-img cd-movie">
+                    <img src="icon/rate.png" alt="Picture">
+                </div> <!-- cd-timeline-img -->
+
+                <div class="cd-timeline-content">
+                    <h2>Batas Akhir Pembayaran</h2>
+                    <p>Setelah lolos babak proposal, peserta melunasi biaya perlombaan</p>
+                    <span class="cd-date">1 Mei 2017</span>
+                </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
-
         <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <img src="../img/cd-icon-picture.svg" alt="Picture">
+            <div class="cd-timeline-img cd-movie">
+                <img src="icon/cup.png" alt="Picture">
             </div> <!-- cd-timeline-img -->
 
-            <div class="cd-timeline-content">
-                <h2>Tahap 2</h2>
-                <p>lomba tahap 2 di Gedung Santo Bonaventura Universitas Atma Jaya Yogyakarta</p>
-                <span class="cd-date">13 Mei 2017</span>
-            </div> <!-- cd-timeline-content -->
+                <div class="cd-timeline-content">
+                <h2>Final Round </h2>
+                <p>Babak final round dilaksanakan di ruang audit kampus 3 gedung Bonaventura</p>
+                <span class="cd-date">12 – 13 Mei 2017</span>
+                </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
     </section> <!-- cd-timeline -->
+</section>
+<section id="kategori" class="kategori">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns ">
+                    <strong>
+                    <br/><br/><h1 align="center">KATEGORI: (PLUS GAMBARAN KASAR)</h1>
+                    <ol>
+                        <li>Pemberdayaan masyarakat<br/>
+                        Masih banyak orang orang yang keadaannya sangat memprihatinkan di luar sana, melalui  subtema hackathon ini para peserta diajak untuk membantu menyelesaikan masalah yang selalu mengakar di Indonesia yaitu kesenjangan sosial. Melalui produk yang mereka buat, diharapkan dapat membantu menghilangkan kesenjangan sosial tersebut. Contoh saja suatu aplikasi yang dapat mempromosikan umkm kecil.</li>
+                        <li>Pendidikan<br/>
+                        Pendidikan merupakan jantung dari proses menuju Indonesia yang lebih baik dan membentuk kepribadian bangsa. Banyak kegiatan/usaha untuk mencerdaskan kehidupan bangsa sudah dilakukan, namun masih dipertanyakan keberhasilannya. Melalui subtema hackathon ini, peserta diminta untuk membuat suatu produk yang dapat menggenjot perkembangan pendidikan di Indonesia.</li>
+                        <li>Kebudayaan<br/>
+                        Indonesia adalah negara dengan banyak suku dan bahasa, serta keindahan daerah yang ditawarkan diharapkan dapat menggaet wisatawan mancanegara maupun wisatawan local untuk menikmati segala keindahan yang ditawarkan. Melalui subtema ini, produk yang diharapkan adalah suatu produk yang dapat mempromosikan keindahan dan kearifan lokal dari Indonesia.</li>
+                        <li>Others<br/>
+                        Kategori ini ditujukan bagi para calon-calon peserta yang memiliki ide kreatif lainnya, yang tidak ada pada kategori-kategori diatas.<br/><br/></li>
+                   </ol>
+               </strong>
+                </div>
+            </div>
+        </div>
+</section>
     <section id="bab3" class="bab3">
             <div class="container">
                 <div class="row">
@@ -192,7 +263,7 @@
                 </div>
                 <div class="six columns">
                     <center><h3>Follow Us</h3></center><br/>
-                    <center class="gambar"><img src="./images/ln.png" ><font size="5px" style="position: relative; top: -13px;">@ykb2847</font> </center>
+                    <center class="gambar"><a href="http://line.me/ti/p/~@ykb1847q"><img src="./images/ln.png" ></a><a href="https://www.instagram.com/ifest_uajy/"><img src="./images/ins.png" ></a></center>
                 </div>
             </div>
         </div>
@@ -203,13 +274,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="scrollreveal-master/dist/scrollreveal.js"></script>
   <script src="scrollreveal-master/dist/scrollreveal.min.js"></script>
-   <script src="stellar.js-master/libs/jquery/jquery-2.0.2.js"></script>
-  <script src="js/style.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/menu.js"> </script>
   <script>
     window.sr = ScrollReveal();
   </script>
   <script src="js/reveal.js"> </script>
-  <script src="js/menu.js"> </script>
+  <script src="js/style.js"></script>
+
+
 </body>
 </html>

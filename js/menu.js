@@ -20,12 +20,14 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
-    $(".menu").slideToggle("slow");
-    $(".openbtn").show();
-    $(".closebtn").hide();
-    var b = 1;
-    if($(document).scrollTop() >= 40)
-    {
-        document.getElementById('isi').style.top = "60px";
+    if($(window).width()<=750){
+        $(".menu").slideToggle("slow");
+        $(".openbtn").show();
+        $(".closebtn").hide();
+        if($(document).scrollTop() >= 40)
+        {
+            document.getElementById('isi').style.top = "60px";
+        }
     }
+
 }

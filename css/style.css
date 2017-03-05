@@ -39,20 +39,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: #0B1A2E;
-    background-image: url('../stardust.png');
+    background-color: #F4F4F4;
     font-family: "CaviarDreams";
 }
 
 a{
     display: block;
-        color: #fff ;
+        color: black;
 }
 /* Header */
 
 .header {
     padding: 20px 0;
     box-sizing: border-box;
+    background-color: #42B548;
 }
 
 .site-title {
@@ -81,14 +81,15 @@ a{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #bf3b2b;
+    background-color: #F4F4F4;
+    border: 1px solid #d9d9d9;
     z-index: 3;
 }
 
 .site-menu .logo {
     display: block;
     float: left;
-    width: 80px;
+    width: 159px;
 }
 
 .site-menu .menu {
@@ -169,8 +170,8 @@ a{
         width:300px;
         height:55px;
         border-radius: 20px;
-        background-color: white;
-        color: #bf3b2b;
+        background-color: #F98009;
+        color: white;
         position: relative;
         top: 15px;
 }
@@ -178,8 +179,8 @@ a{
 #opening2 .bg1{
         width:350px;
         height:55px;
-        border-radius: 125px;
-        background-color: #bf3b2b;
+        border-radius: 5px;
+        background-color: #f98009;
         color: white;
         position: relative;
         top: 15px;
@@ -187,9 +188,9 @@ a{
 }
 
 #opening2 .bg2{
-    border-radius: 20px;
-    background-color: #F8DA80;
-    color: black;
+    border-radius: 5px;
+    background-color: #42B548;
+    color: white;
     font-size: 25px;
     padding: 25px 0px;
     position: relative;
@@ -212,26 +213,36 @@ a{
 }
 
 a.register-btn{
-    background-color: #F8DEA3;
-    border-radius: 125px;
-    color: black;
+    background-color: #42B549;
+    border-radius: 5px;
+    color: white;
     margin: 0;
     line-height: inherit;
     position: relative;
     padding: 10px 20px;
     height: 50px;
-    width: 150px;
+    width: auto;
 }
 
 div.register-btn-change:hover a.register-btn{
-    background: #bf3b2b;
+    background: #4fa149;
     color: white;
 }
 
 div.register-btn-change{
-    width: 150px;
+    width: 240px;
 }
 
+a.menu-link:hover {
+    background-color: #49B86B;
+    color: white;
+}
+a.site-title{
+    display: inline;
+}
+a.site-title:hover {
+    color: white;
+}
 
 
 /*bab1*/
@@ -240,7 +251,8 @@ div.register-btn-change{
     height: 450px;
     position: static;
     box-sizing: border-box;
-    background-color: #8ccdbc;
+    background-color: #42B548;
+    border: 1px solid #F4F4F4;
     padding: 50px 50px;
 }
 #bab1 img {
@@ -250,12 +262,13 @@ div.register-btn-change{
 }
 
 #bab1 .color {
-    color: black;
+    color: white;
 }
 /*syarat*/
 #juduls h2{
     position: relative;
     top: 50px;
+    color: #42B548;
 }
 #juduls .six {
     position: relative;
@@ -267,9 +280,13 @@ div.register-btn-change{
     top: 5px;
     bottom: 5px;
 }
+
+#syarat .eight{
+    color: #42B548;
+}
 .vr{
     width:1px;
-    background-color:white;
+    background-color: #42B548;
     position: absolute;
     top:0;
     bottom:0;
@@ -277,23 +294,21 @@ div.register-btn-change{
     left: 15%;
     margin: 0 50px
 }
-
+.bgsyarat{
+    background-color: #F4F4F4;
+}
 /*bab2*/
 
 #bab2{
     box-sizing: border-box;
     margin-left: 0;
     padding: 50px;
-    background-image: url(../foot.png);
-    background-position: -100px -1000px;
-    background-size: 100%;
-    background-color: #0B1A2E;
-    background-repeat: no-repeat;
+    background-color: #42B548;
     height: auto;
 }
 #bab2 h2{
-    background-color:#BF3B2B;
-    border-radius: 125px;
+    background-color: #F98009;
+    border-radius: 15px;
     width:50%;
     color: white;
 }
@@ -311,11 +326,11 @@ div.register-btn-change{
 }
 
 #bab2 .four{
-    height:450px;
-    border-radius: 125px;
-    background-color:#F8DA80;
-    background-position: center;
-    color: black;
+    height:auto;
+    border-radius: 30px;
+    background-color: #F4F4F4;
+    color: #42b548;
+    border: 1px solid #d9d9d9;
 }
 #bab2 h4{
     font-size: 20px;
@@ -338,13 +353,22 @@ div.register-btn-change{
     font-size: 20px;
 }
 
+.bgjadwal {
+    background-color: #42B548;
+    border-radius: 680px;
+    border: 2px solid white;
+}
 
+.cd-timeline-content {
+    border: 1px solid #42b548;
+    background: #f4f4f4;
+}
 /*bab3*/
 
 .bab3 {
     background: #0a1a2e;
     background-image: url(../paralax.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     background-position: 0 1400px;
     background-size: 100% 800px ;
@@ -353,16 +377,16 @@ div.register-btn-change{
 a.register-btn2{
     width: 300px;
     height: auto;
-    background-color:#F8DEA3;
+    background-color:#42B549;
     font-size: 18px;
     margin: 60px 0;
     padding: 15px 0;
-    color: black ;
-    border-radius: 125px;
+    color: white ;
+    border-radius: 5px;
 }
 
 div.register-btn2-change:hover a.register-btn2{
-    background: #bf3b2b;
+    background: #4fa149;
     color: white;
 }
 
@@ -375,40 +399,36 @@ div.register-btn2-change{
 
 #penutup {
     padding: 50px 0;
-    background-image: url(../foot.png);
-    background-position: -100px -1850px;
-    background-size: 100%;
-    background-color: #0B1A2E;
-    background-repeat: no-repeat;
-    height: 300px;
+    background-color: white;
+    height: auto;
 }
 #penutup h3{
-    background-color: #bf3b2b;
-    border-radius: 125px;
+    background-color: #f98009;
+    border-radius: 5px;
     width: 200px;
     z-index: 2;
     position: relative;
 }
 #penutup .bullet {
-    background-color: #F8DA80;
-    border-radius: 25px;
+    background-color: #F4F4F4;
+    border-radius: 5px;
     width: 400px;
-    height: 50px;
+    height:auto;
     color: black;
     margin: 0;
     padding: 45px 20px;
     position: relative;
     top: -60px;
-    height: auto;
     z-index: 1;
+    border: 1px solid #42B549;
 }
 
 #penutup img{
     width: 50px;
 }
 #penutup .gambar {
-    background-color: #F8DA80;
-    border-radius: 25px;
+    background-color: #F4F4F4;
+    border-radius: 5px;
     width: 400px;
     color: black;
     margin: 0;
@@ -418,6 +438,10 @@ div.register-btn2-change{
     left: 30px;
     height: auto;
     z-index: 1;
+    border: 1px solid #42B549;
+}
+#penutup a{
+    display: inline;
 }
 
 /*reveal*/
@@ -455,11 +479,10 @@ div.register-btn2-change{
     z-index: 2;
 }
 #pendaftaran .breadcrumb li {
-	color:white;
+	color:#42B548;
 	list-style:none;
 	display:inline-block;
 }
-
 
 #pendaftaran .breadcrumb>li+li:before {
 	content:'>\00a0'
@@ -471,6 +494,14 @@ div.register-btn2-change{
 
 .section-title {
     margin-top:5px;
+}
+
+#pendaftaran .columns{
+    color: #42B548;
+}
+
+#gab .columns{
+    color: #42B548;
 }
 
 /*form*/
@@ -519,12 +550,12 @@ input {
 }
 
 button.register-btn3{
-    background-color: #F8DEA3 !important;
-    color: black;
+    background-color: #42B548 !important;
+    color: white;
 }
 
 div.register-btn3-change:hover button.register-btn3 {
-    background: #bf3b2b !important;
+    background: #4fa149 !important;
     color: white;
 }
 
@@ -535,4 +566,23 @@ div.register-btn3-change{
 .pemberitahuan {
     position: relative;
     top: 162px;
+}
+
+#kategori {
+    background-color: #42B548;
+    color: white;
+    height: auto;
+}
+
+.bgkategori {
+    height:auto;
+    width: auto;
+    border-radius: 30px;
+    background-color: #F4F4F4;
+    color: #42b548;
+    border: 1px solid #d9d9d9;
+}
+
+.full{
+    height: 801px;
 }
