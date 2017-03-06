@@ -55,6 +55,7 @@ a{
     background-color: #42B548;
 }
 
+
 .site-title {
     text-align: center;
 }
@@ -72,6 +73,10 @@ a{
     font-size: 32px;
     line-height: 32px;
     margin: 0;
+}
+
+a.site-title{
+    color: #f4f4f4;
 }
 
 /* Site Menu */
@@ -341,27 +346,34 @@ a.site-title:hover {
     padding: 30px 0 0 0;
 }
 
+#judulj h1{
+    color: #42b548 !important;
+}
 #cd-timeline .cd-date {
-    color: white;
+    color: #42b548;
     font-size: 20px;
+    background-color: #f4f4f4;
+    background-size: auto;
 }
 
 #cd-timeline h2{
     font-size: 30px;
+    color: white;
 }
 #cd-timeline p {
     font-size: 20px;
 }
 
-.bgjadwal {
-    background-color: #42B548;
-    border-radius: 680px;
-    border: 2px solid white;
-}
-
 .cd-timeline-content {
     border: 1px solid #42b548;
-    background: #f4f4f4;
+    background: #42b548;
+    color: white;
+}
+.cd-timeline-content::before{
+    border-left-color: #42b548;
+}
+.cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
+    border-right-color: #42b548;
 }
 /*bab3*/
 
@@ -543,7 +555,9 @@ div.register-btn2-change{
 #gab .kiri{
     position: relative;
     left: -35px;
+    top: -70px;
 }
+
 
 input {
     color: black;
