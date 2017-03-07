@@ -94,29 +94,32 @@ a.site-title{
 .site-menu .logo {
     display: block;
     float: left;
-    width: 159px;
+    width: 100px;
+    padding: 1% 0px;
 }
 
 .site-menu .menu {
     position: relative;
-    top: 10px;
+    top: 0px;
     float: right;
 
 }
 
 .site-menu .menu ul > li {
     display: inline-block;
-    margin: 0 -4px 0 0;
-
 }
 
 .site-menu .menu ul > li a {
     display: block;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 18px;
-    padding: 11px 20px;
+    padding: 14px 9px;
     text-decoration: none;
+}
+
+.site-menu ul{
+    margin-bottom: 0px !important;
 }
 
 .site-menu .closebtn{
@@ -132,12 +135,6 @@ a.site-title{
 }
 .site-menu .logo2{
     display: none;
-}
-
-/* Content */
-
-.content {
-    height: 450px;
 }
 
 /* opening */
@@ -332,10 +329,9 @@ a.site-title:hover {
 
 #bab2 .four{
     height:auto;
-    border-radius: 30px;
+    border-radius: 5px;
     background-color: #F4F4F4;
     color: #42b548;
-    border: 1px solid #d9d9d9;
 }
 #bab2 h4{
     font-size: 20px;
@@ -591,10 +587,9 @@ div.register-btn3-change{
 .bgkategori {
     height:auto;
     width: auto;
-    border-radius: 30px;
+    border-radius: 5px;
     background-color: #F4F4F4;
     color: #42b548;
-    border: 1px solid #d9d9d9;
 }
 
 .full{
