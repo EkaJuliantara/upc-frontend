@@ -1,5 +1,6 @@
 /* Larger than mobile */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px)
+ {
     /* Header  sama dengan style.css*/
     /* Site Menu */
 
@@ -97,18 +98,20 @@
     }
     /* opening */
 
+    #head img{
+        width: 585px;
+    }
+
+    #head {
+        height: auto;
+    }
 
     /*bab1*/
     #bab1 {
         height: 600px;
     }
-    #bab1 .color{
-        position: fixed;
-    }
-    #bab1 img{
-        opacity: 0.6;
-    }
-    /*syarat*/
+
+        /*syarat*/
     .vr {
         display: none;
     }
@@ -162,33 +165,13 @@
             margin-left: 0px !important;
         }
 
+        #gab .kiri{
+            display: none;
+        }
 
-    #pendaftaran .breadcrumb {
-    	float:right;
-    	background:transparent;
-    	margin-top:0;
-    	margin-bottom:0;
-    	padding:7px 5px;
-    	position:relative;
-    	top:15px;
-    	right:10px;
-    	border-radius:2px;
-        z-index: 2;
-    }
-    #pendaftaran .breadcrumb li {
-    	color:white;
-    	list-style:none;
-    	display:inline-block;
-    }
-
-
-    #pendaftaran .breadcrumb>li+li:before {
-    	content:'>\00a0'
-    }
-
-    #pendaftaran a {
-        display: inline-block !important;
-    }
+        #gab .six{
+            width: 100%;
+        }
 
     .section-title {
         margin-top:5px;
@@ -251,5 +234,43 @@
 
     div.register-btn3-change{
         width: 100px;
+    }
+
+    .bgsyarat .columns {
+        float: none;
+    }
+
+    #juduls h2{
+        top: 0px;
+    }
+    #syarat{
+        padding: 0px;
+        top: 0px;
+    }
+
+    #juduls .three {
+        display: none;
+    }
+}
+@media screen and (max-width: 609px){
+
+#bab1 .color{
+    position: relative;
+    width: auto;
+    z-index: 1;
+    top: -288px;
+}
+
+#bab1 .six{
+    width: 100%;
+}
+#bab1 img{
+    opacity: 0.6;
+}
+}
+@media screen and (max-width: 585px){
+    #pendaftaran .tengah{
+        width: 50% ;
+        font-size: 13px;
     }
 }

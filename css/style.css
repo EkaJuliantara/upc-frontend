@@ -139,33 +139,33 @@ a.site-title{
 
 /* opening */
 
+#head {
+    height: 425px;
+    background: white;
+}
+#head img{
+    width: 75%;
+}
 .opening {
     position: relative;
     display: block;
-    height: 550px;
+    height:auto;
 }
 
 #opening .teks{
         position: relative;
-        top:346px;
+        z-index: 1;
 }
 #opening2 .teks{
         position: relative;
-        top: 55px;
 }
 #opening {
-    background-image: url(../head.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0 25px;
+
+    background-color: white;
 }
 
 #opening2 {
-    background-image: url(../head2.png);
-    background-repeat: no-repeat;
-    background-position: center 25px;
-    background-size: 1355px;
-    z-index: 1;
+    background-color: white;
 }
 
 #opening .bg1{
@@ -175,7 +175,6 @@ a.site-title{
         background-color: #F98009;
         color: white;
         position: relative;
-        top: 15px;
 }
 
 #opening2 .bg1{
@@ -272,10 +271,6 @@ a.site-title:hover {
     top: 50px;
     color: #42B548;
 }
-#juduls .six {
-    position: relative;
-    bottom: -30px;
-}
 #syarat{
     padding: 50px 0;
     position: relative;
@@ -365,8 +360,11 @@ a.site-title:hover {
     background: #42b548;
     color: white;
 }
+
+
 .cd-timeline-content::before{
     border-left-color: #42b548;
+    border-right: 7px solid #42b548;
 }
 .cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
     border-right-color: #42b548;
@@ -378,7 +376,7 @@ a.site-title:hover {
     background-image: url(../paralax.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
-    background-position: 0 1400px;
+    background-position: center;
     background-size: 100% 800px ;
 
 }
@@ -484,7 +482,6 @@ div.register-btn2-change{
 	top:15px;
 	right:10px;
 	border-radius:2px;
-    z-index: 2;
 }
 #pendaftaran .breadcrumb li {
 	color:#42B548;
@@ -500,6 +497,10 @@ div.register-btn2-change{
     display: inline-block !important;
 }
 
+#pendaftaran a:hover{
+    color: white;
+    background-color: #49B86B;
+}
 .section-title {
     margin-top:5px;
 }
@@ -551,7 +552,6 @@ div.register-btn2-change{
 #gab .kiri{
     position: relative;
     left: -35px;
-    top: -70px;
 }
 
 
