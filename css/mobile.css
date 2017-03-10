@@ -1,5 +1,5 @@
 /* Larger than mobile */
-@media screen and (max-width: 750px)
+@media screen and (max-width: 788px)
  {
     /* Header  sama dengan style.css*/
     /* Site Menu */
@@ -271,6 +271,18 @@
 @media screen and (max-width: 585px){
     #pendaftaran .tengah{
         width: 50% ;
-        font-size: 13px;
+        font-size: 12px;
+    }
+    #pendaftaran .kanan{
+        font-size: 12px;
+    }
+
+    #opening2 .bg1{
+        width: 68%;
+        height: 86px;
+    }
+
+    #opening2 .bg2{
+        top : -26px;
     }
 }

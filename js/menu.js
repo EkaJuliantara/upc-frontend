@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    if($(document).width() <= 750)
+    if($(document).width() <= 788)
     {
         $(".menu").hide();
         $(".closebtn").hide();
@@ -20,7 +20,7 @@ function openNav() {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
-    if($(window).width()<=750){
+    if($(window).width()<=788){
         $(".menu").slideToggle("slow");
         $(".openbtn").show();
         $(".closebtn").hide();

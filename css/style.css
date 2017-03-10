@@ -156,9 +156,7 @@ a.site-title{
         position: relative;
         z-index: 1;
 }
-#opening2 .teks{
-        position: relative;
-}
+
 #opening {
 
     background-color: white;
@@ -200,10 +198,10 @@ a.site-title{
 }
 
 #opening2 img{
-    width: 140px;
+
     position: relative;
     top: 36px;
-    left: 3px;
+
 }
 .opening .logo2{
     display: block;
@@ -471,6 +469,14 @@ div.register-btn2-change{
         position: relative;
     }
 
+.pendaftaran_berhasil{
+    float: right;
+    width: 100%;
+}
+
+#pendaftaran .kanan {
+    width: 100%;
+}
 
 #pendaftaran .breadcrumb {
 	float:right;
@@ -571,11 +577,6 @@ div.register-btn3-change:hover button.register-btn3 {
 
 div.register-btn3-change{
     width: 100px;
-}
-
-.pemberitahuan {
-    position: relative;
-    top: 162px;
 }
 
 #kategori {
