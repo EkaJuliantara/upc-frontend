@@ -222,15 +222,6 @@
         color: black;
     }
 
-    button.register-btn3{
-        background-color: #F8DEA3 !important;
-        color: black;
-    }
-
-    div.register-btn3-change:hover button.register-btn3 {
-        background: #bf3b2b !important;
-        color: white;
-    }
 
     div.register-btn3-change{
         width: 100px;
