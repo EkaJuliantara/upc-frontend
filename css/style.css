@@ -596,3 +596,7 @@ div.register-btn3-change{
 .full{
     height: 801px;
 }
+
+#site-menu .hide {
+    display: none;
+}
