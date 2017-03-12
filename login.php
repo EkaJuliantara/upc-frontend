@@ -1,3 +1,10 @@
+<?php
+  error_reporting(0);
+  ob_start();
+  session_start();
+  if (!$_SESSION['hackfest_teams']['id']) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,34 +94,31 @@
                             </div>
 
                 </section>
-<<<<<<< HEAD
                 <section id="head2">
-=======
->>>>>>> origin/master
+
                     <center>
-                    <br/>
-                    <br/>
-                        <img src="head.png">
+                        <h1 style="color: #42B548;">Masuk Area Peserta</h1>
                     </center>
                     </section>
 
-                <div class="twelve columns" style="margin-top: 60px">
+                <div ng-app="loginApp" ng-controller="loginCtrl" class="twelve columns">
+                <form ng-submit="loginSubmit()">
 
                     <center class="teks warna">
                     <div class="lebarB">
                     <div class="pemberitahuan"><label><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <input ng-model="formData.email" type="email" placeholder="Enter Email" name="email" required>
 
                     <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input ng-model="formData.password" type="password" placeholder="Enter Password" name="password" required>
                     <br/>
 
-                    <input type="checkbox" checked="checked"> Remember me
-
                     <div class="btn4-change">
-                      <button type="button" class="cancelbtn btn4">Cancel</button>
-                      <button type="submit" class="signupbtn btn4">Login</button>
+                      <!--<button type="button" class="cancelbtn btn4">Cancel</button>-->
+                      <button ng-disabled="button == 'MASUK...'" type="submit" class="signupbtn btn4">{{ button }}</button>
                     </div></center>
+
+                </form>
 </div>
         </div>
     </section>
@@ -152,5 +156,87 @@
 <script src="vertical-timeline/js/main.js"></script>
 <script src="vertical-timeline/js/modernizr.js"></script>
 
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script>
+
+function httpInterceptor() {
+  return {
+    request: function(config) {
+      return config;
+    },
+
+    requestError: function(config) {
+      return config;
+    },
+
+    response: function(res) {
+      return res;
+    },
+
+    responseError: function(res) {
+      return res;
+    }
+  }
+}
+
+var loginApp = angular.module("loginApp", [])
+  .factory('httpInterceptor', httpInterceptor)
+  .config(function($httpProvider) {
+    $httpProvider.interceptors.push('httpInterceptor');
+  });
+
+loginApp.controller("loginCtrl", function($scope, $http, $window) {
+
+  $scope.formData = {};
+  $scope.errors = "";
+
+  $scope.button = "MASUK";
+
+  $scope.loginSubmit = function () {
+
+    $scope.errors = "";
+
+    $scope.button = "MASUK...";
+
+    $http({
+      method  : 'POST',
+      url     : 'http://127.0.0.1:8000/v1/hackfest/login',
+      data    : $.param($scope.formData),
+      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+     })
+    .then(function(response) {
+      switch (response.status) {
+        case 400:
+          $scope.errors = response.data.errors;
+          $scope.button = "MASUK";
+        break;
+        case 500:
+          $scope.errors.ise = "Mohon maaf terdapat kesalahan di bagian server.";
+          $scope.button = "MASUK";
+          break;
+        default:
+          $scope.button = "MASUK...";
+
+          $http({
+            method  : 'POST',
+            url     : 'proses-login.php',
+            data    : $.param({ id: response.data.data.id }),
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+          }).then(function(data) {
+            $window.location.href = 'area-peserta.php';
+          });
+      }
+    });
+  }
+});
+
+</script>
+
 </body>
 </html>
+
+<?php
+  }else{
+    header("location: area-peserta.php");
+  }
+?>
