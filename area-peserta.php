@@ -1,7 +1,7 @@
 <?php
   ob_start();
   session_start();
-  if ($_SESSION['i2c_teams']['id']) {
+  if ($_SESSION['hackfest_teams']['id']) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>I2C - Area Peserta</title>
+    <title>Hackfest - Area Peserta</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -21,27 +21,28 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
   </head>
   <body>
-    <section id="header">
+    <section id="site-menu" class="site-menu putih">
         <div class="container">
             <div class="row">
                 <div class="twelve columns">
-                  <a href="http://ifest-uajy.com/i2c" class="logo">
-                      <img class="i2c-logo" src="img/logo.png" alt="" />
+                  <a href="index.html">
+                      <img class="logo" src="logo1.png" alt="" />
                   </a>
-                  <a class="btn logout" href="logout.php">Log Out</a>
+                  <a class="logout" href="logout.php">Log Out</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section ng-app="i2c2App" ng-init="idTeam=<?php echo $_SESSION['i2c_teams']['id']; ?>; categoryTeam=<?php echo $_SESSION['i2c_teams']['i2c_category_id']; ?>" id="main">
+    <section id="bglogin" ng-app="hackfest2App" ng-init="idTeam=<?php echo $_SESSION['hackfest_teams']['id']; ?>; categoryTeam=<?php echo $_SESSION['hackfest_teams']['hackfest_category_id']; ?>" id="main">
       <div ng-controller="dataTeamCtrl" class="container">
         <div class="row">
           <div class="eight columns">
@@ -64,7 +65,7 @@
                       <th>No. HP</th>
                       <td><input ng-model="dataTeam.phone" type="text" name="phone" required /></td>
                     </tr>
-                    <tr ng-show="categoryTeam == 1">
+                    <tr>
                       <th>Asal Sekolah</th>
                       <td><input ng-model="dataTeam.origin" type="text" name="origin" /></td>
                     </tr>
@@ -75,7 +76,7 @@
                   </table>
                   <button type="submit" class="btn">{{ button }}</button>
                 </form>
-              
+
                 <p ng-hide="dataTeamLoaded">Sedang mengambil data dari server. Mohon tunggu sebentar ya...</p>
                 </div>
 
@@ -86,7 +87,7 @@
                 <table ng-show="dataDetailsLoaded" class="table">
                   <thead>
                     <tr>
-                      <th ng-show="categoryTeam == 1">
+                      <th>
                         Proposal
                       </th>
                       <th>
@@ -96,7 +97,7 @@
                         Status
                       </th>
                       <th>
-                        
+
                       </th>
                     </tr>
                   </thead>
@@ -105,7 +106,7 @@
                       <td ng-show="categoryTeam == 1"><a href="http://api.ifest-uajy.com/storage/media/{{ data.document_name }}" target="_blank">Lihat</a></td>
                       <td>
                         <a ng-show="data.payment_id != NULL" href="http://api.ifest-uajy.com/storage/media/{{ data.payment_name }}" target="_blank">Lihat</a>
-                        
+
                         <button ng-show="data.payment_id == NULL && categoryTeam == 1" type="file" ngf-select="uploadPayment($file, $invalidFiles, data.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="data.payment_id == NULL && categoryTeam == 1" class="payment-info {{ data.id }}">Pilih file untuk diunggah</span>
                       </td>
                       <td>
@@ -132,7 +133,7 @@
                   <thead>
                     <tr>
                       <th>Nama</th>
-                      <th>Kartu Identitas</th>
+                      <th>SKM</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -203,7 +204,7 @@
     }
   }
 
-  var app = angular.module('i2c2App', ['ngFileUpload'])
+  var app = angular.module('hackfest2App', ['ngFileUpload'])
     .factory('httpInterceptor', httpInterceptor)
     .config(function($httpProvider) {
       $httpProvider.interceptors.push('httpInterceptor');
@@ -223,7 +224,7 @@
 
     $scope.getTeam = function() {
 
-      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam).then(function (response) {
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam).then(function (response) {
 
         $scope.dataTeamLoaded = 0;
         $scope.dataTeam = response.data.data;
@@ -247,7 +248,7 @@
 
       $http({
         method  : 'PATCH',
-        url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
         data    : $.param($scope.dataTeam),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -297,13 +298,13 @@
 
     $scope.getDetail = function() {
       $scope.dataDetailsLoaded = 0;
-      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/details').then(function (response) {
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam+'/details').then(function (response) {
         if (response.data.data) {
           $scope.dataDetails = response.data.data;
         }else{
           $scope.dataDetails = 0;
         }
-        
+
         $scope.dataDetailsLoaded = 1;
 
         angular.forEach($scope.dataDetails, function(value, key) {
@@ -390,11 +391,11 @@
     }
 
     $scope.addDetailProcess = function() {
-      $scope.dataDetail['i2c_team_id'] = $scope.idTeam;
+      $scope.dataDetail['hackfest_team_id'] = $scope.idTeam;
 
       $http({
         method  : 'POST',
-        url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/detail',
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail',
         data    : $.param($scope.dataDetail),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -416,10 +417,10 @@
         }).then(function (response) {
 
           $scope.dataDetail['payment_id'] = response.data.data.id;
-          
+
           $http({
             method  : 'PATCH',
-            url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/detail/'+id,
+            url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail/'+id,
             data    : $.param($scope.dataDetail),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
            })
@@ -438,7 +439,7 @@
 
       $('.btn.delete-detail.'+id).text('Menghapus...');
 
-      $http.delete('http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/detail/'+id).then(function (response) {
+      $http.delete('http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail/'+id).then(function (response) {
         $scope.getDetail();
       })
       .then(function(data) {
@@ -468,13 +469,13 @@
     $scope.uploadFiles = function(file, errFiles) {
         $scope.media = file;
         $scope.errMedia = errFiles && errFiles[0];
-        $scope.infoMedia = $scope.media.name; 
+        $scope.infoMedia = $scope.media.name;
     }
 
     $scope.getMembers = function() {
 
       $scope.dataMembersLoaded = 0;
-      $http.get("http://api.ifest-uajy.com/v1/i2c/"+$scope.idTeam+'/members').then(function (response) {        
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam+'/members').then(function (response) {
         if (response.data.data) {
           $scope.dataMembers = response.data.data;
         }else{
@@ -521,7 +522,7 @@
 
             $http({
               method  : 'POST',
-              url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/members',
+              url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members',
               data    : $.param($scope.newMembers),
               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
              })
@@ -541,7 +542,7 @@
                   $scope.getMembers();
                   $scope.infoMedia = "Pilih file untuk diunggah.";
               }
-            });            
+            });
           });
 
         }else{
@@ -559,7 +560,7 @@
 
       $http({
         method  : 'PATCH',
-        url     : 'http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/members/'+data.id,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members/'+data.id,
         data    : $.param(data),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -577,7 +578,7 @@
 
       $('.btn.delete-member.'+id).text('Menghapus...');
 
-      $http.delete('http://api.ifest-uajy.com/v1/i2c/'+$scope.idTeam+'/members/'+id).then(function (response) {
+      $http.delete('http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members/'+id).then(function (response) {
         $scope.getMembers();
       })
       .then(function(data) {

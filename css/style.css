@@ -39,8 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    /*background-color: #F4F4F4;*/
-    background: url('../pattern.png');
+    background-color: #F4F4F4;
     font-family: "CaviarDreams";
 }
 
@@ -53,7 +52,7 @@ a{
 .header {
     padding: 20px 0;
     box-sizing: border-box;
-    background-color: rgb(10, 26, 46);
+    background-color: #42B548;
 }
 
 
@@ -87,8 +86,8 @@ a.site-title{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #FFF;
-    border-bottom: 1px solid #d9d9d9;
+    background-color: #F4F4F4;
+    border: 1px solid #d9d9d9;
     z-index: 3;
 }
 
@@ -142,6 +141,7 @@ a.site-title{
 
 #head {
     height: 425px;
+    background: white;
 }
 #head img{
     width: 75%;
@@ -155,6 +155,11 @@ a.site-title{
 #opening .teks{
         position: relative;
         z-index: 1;
+}
+
+#opening {
+
+    background-color: white;
 }
 
 #opening2 {
@@ -284,6 +289,9 @@ a.site-title:hover {
     left: 15%;
     margin: 0 50px
 }
+.bgsyarat{
+    background-color: #F4F4F4;
+}
 /*bab2*/
 
 #bab2{
@@ -333,8 +341,8 @@ a.site-title:hover {
 #cd-timeline .cd-date {
     color: #42b548;
     font-size: 20px;
+    background-color: #f4f4f4;
     background-size: auto;
-    font-weight: bold;
 }
 
 #cd-timeline h2{
@@ -354,6 +362,7 @@ a.site-title:hover {
 
 .cd-timeline-content::before{
     border-left-color: #42b548;
+    border-right: 7px solid #42b548;
 }
 .cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
     border-right-color: #42b548;
@@ -394,6 +403,7 @@ div.register-btn2-change{
 
 #penutup {
     padding: 50px 0;
+    background-color: white;
     height: auto;
 }
 #penutup h3{
@@ -573,6 +583,15 @@ div.register-btn3-change{
     color: white;
 }
 
+.btn{
+    background-color: #42B548 !important;
+    color: white;
+}
+
+button.btn:hover{
+    background: #4fa149 !important;
+    color: white;
+}
 a.btn4{
     display:inline;
 }
@@ -616,4 +635,65 @@ div.btn4-change:hover button.btn4{
 
 #kategori .nine{
     text-align: justify;
+}
+
+.logout {
+    text-decoration: none;
+    background-color: #42B549;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    float: right;
+}
+
+a.logout {
+    display: inline-block;
+}
+
+a.logout:hover{
+    background-color: #4fa149;
+    color: white;
+}
+
+.putih{
+    background-color: white;
+}
+
+#bglogin{
+    background-image: url(../pattern.png);
+}
+
+#bglogin .box-body{
+    color: #42B549 !important;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+table input{
+    width: 100%;
+}
+
+.box-header {
+    color: #42B549 !important;
+    text-align: center;
+}
+
+#bglogin .eight {
+    border: 1px solid #42b549;
+    padding: 23px;
+    border-radius: 32px;
+    background-color: white;
+}
+#bglogin .four {
+    border: 1px solid #42b549;
+    border-radius: 37px;
+    background-color: white;
+    padding: 23px;
+}
+
+#bglogin .container{
+    padding: 35px 0px;
 }
