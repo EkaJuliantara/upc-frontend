@@ -39,7 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: #F4F4F4;
+    /*background-color: #F4F4F4;*/
+    background: url('../pattern.png');
     font-family: "CaviarDreams";
 }
 
@@ -52,7 +53,7 @@ a{
 .header {
     padding: 20px 0;
     box-sizing: border-box;
-    background-color: #42B548;
+    background-color: rgb(10, 26, 46);
 }
 
 
@@ -86,8 +87,8 @@ a.site-title{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #F4F4F4;
-    border: 1px solid #d9d9d9;
+    background-color: #FFF;
+    border-bottom: 1px solid #d9d9d9;
     z-index: 3;
 }
 
@@ -141,7 +142,6 @@ a.site-title{
 
 #head {
     height: 425px;
-    background: white;
 }
 #head img{
     width: 75%;
@@ -155,11 +155,6 @@ a.site-title{
 #opening .teks{
         position: relative;
         z-index: 1;
-}
-
-#opening {
-
-    background-color: white;
 }
 
 #opening2 {
@@ -289,9 +284,6 @@ a.site-title:hover {
     left: 15%;
     margin: 0 50px
 }
-.bgsyarat{
-    background-color: #F4F4F4;
-}
 /*bab2*/
 
 #bab2{
@@ -341,8 +333,8 @@ a.site-title:hover {
 #cd-timeline .cd-date {
     color: #42b548;
     font-size: 20px;
-    background-color: #f4f4f4;
     background-size: auto;
+    font-weight: bold;
 }
 
 #cd-timeline h2{
@@ -362,7 +354,6 @@ a.site-title:hover {
 
 .cd-timeline-content::before{
     border-left-color: #42b548;
-    border-right: 7px solid #42b548;
 }
 .cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
     border-right-color: #42b548;
@@ -403,7 +394,6 @@ div.register-btn2-change{
 
 #penutup {
     padding: 50px 0;
-    background-color: white;
     height: auto;
 }
 #penutup h3{
