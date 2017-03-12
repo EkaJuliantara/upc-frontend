@@ -326,8 +326,8 @@ a.site-title:hover {
 #cd-timeline .cd-date {
     color: #42b548;
     font-size: 20px;
-    background-color: #f4f4f4;
     background-size: auto;
+    font-weight: bold;
 }
 
 #cd-timeline h2{
