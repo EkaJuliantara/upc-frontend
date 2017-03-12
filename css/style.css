@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: url('../pattern.png');
+    background-image: url(../pattern.png);
     font-family: "CaviarDreams";
 }
 
@@ -52,7 +52,7 @@ a{
 .header {
     padding: 20px 0;
     box-sizing: border-box;
-    background-color: rgb(10, 26, 46);
+    background-color:#0A1A2E;
 }
 
 
@@ -86,8 +86,8 @@ a.site-title{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #FFF;
-    border-bottom: 1px solid #d9d9d9;
+    background-color: white;
+    border: 1px solid #d9d9d9;
     z-index: 3;
 }
 
@@ -156,9 +156,6 @@ a.site-title{
         z-index: 1;
 }
 
-#opening2 {
-    background-color: white;
-}
 
 #opening .bg1{
         width:300px;
@@ -241,17 +238,14 @@ a.site-title:hover {
 /*bab1*/
 
 #bab1{
-    height: 450px;
     position: static;
     box-sizing: border-box;
     background-color: #42B548;
     border: 1px solid #F4F4F4;
-    padding: 50px 50px;
+    padding: 50px 0px;
 }
 #bab1 img {
-    position: static;
-    width: 200px;
-    height: 350px;
+    height: 259px;
 }
 
 #bab1 .color {
@@ -288,7 +282,7 @@ a.site-title:hover {
 #bab2{
     box-sizing: border-box;
     margin-left: 0;
-    padding: 50px;
+    padding: 50px 0px;
     background-color: #42B548;
     height: auto;
 }
@@ -332,8 +326,8 @@ a.site-title:hover {
 #cd-timeline .cd-date {
     color: #42b548;
     font-size: 20px;
+    background-color: #f4f4f4;
     background-size: auto;
-    font-weight: bold;
 }
 
 #cd-timeline h2{
@@ -353,6 +347,7 @@ a.site-title:hover {
 
 .cd-timeline-content::before{
     border-left-color: #42b548;
+    border-right: 7px solid #42b548;
 }
 .cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
     border-right-color: #42b548;
@@ -607,7 +602,8 @@ div.btn4-change:hover button.btn4{
 }
 
 .full{
-    height: 801px;
+    height: auto;
+    margin-bottom:20px;
 }
 
 #site-menu .hide {
@@ -619,7 +615,7 @@ div.btn4-change:hover button.btn4{
 }
 
 #kategori img {
-    border-radius: 120px;
+    border-radius: 360px;
 }
 
 #kategori .nine{
@@ -642,10 +638,6 @@ a.logout {
 a.logout:hover{
     background-color: #4fa149;
     color: white;
-}
-
-.putih{
-    background-color: white;
 }
 
 #bglogin{
@@ -685,4 +677,8 @@ table input{
 
 #bglogin .container{
     padding: 35px 0px;
+}
+
+#kategori2 li{
+    display: inline;
 }

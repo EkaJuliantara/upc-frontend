@@ -107,9 +107,6 @@
     }
 
     /*bab1*/
-    #bab1 {
-        height: 600px;
-    }
 
         /*syarat*/
     .vr {
@@ -242,21 +239,10 @@
         display: none;
     }
 }
-@media screen and (max-width: 609px){
-
-#bab1 .color{
-    position: relative;
-    width: auto;
-    z-index: 1;
-    top: -288px;
-}
-
-#bab1 .six{
-    width: 100%;
-}
-#bab1 img{
-    opacity: 0.6;
-}
+@media screen and (max-width: 650px){
+    #bab1 .six {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 585px){
     #pendaftaran .tengah{
@@ -274,5 +260,28 @@
 
     #opening2 .bg2{
         top : -26px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #kategori .lebargambar{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 343px){
+    #opening .bg1{
+        width: auto;
+    }
+    div.register-btn-change {
+        width: auto;
+    }
+
+    a.register-btn2{
+        width: auto;
+    }
+
+    div.register-btn2-change{
+        width: auto;
     }
 }
