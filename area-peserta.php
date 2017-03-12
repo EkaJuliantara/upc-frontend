@@ -253,14 +253,14 @@
 
         $scope.dataTeam = response.data.data;
 
-        if ($scope.dataTeam.proposal) {
+        if ($scope.dataTeam.proposal != 0) {
         
-          if ($scope.dataTeam.proposal) {
+          if ($scope.dataTeam.proposal != 0) {
             $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.proposal).then(function (response) {
               $scope.dataTeam.proposal_name = response.data.data.file_name;
             });
           }
-          if ($scope.dataTeam.receipt) {
+          if ($scope.dataTeam.receipt != 0) {
             $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.receipt).then(function (response) {
               $scope.dataTeam.receipt_name = response.data.data.file_name;
             });
