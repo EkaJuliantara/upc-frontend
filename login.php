@@ -116,7 +116,11 @@
                     <div class="btn4-change">
                       <!--<button type="button" class="cancelbtn btn4">Cancel</button>-->
                       <button ng-disabled="button == 'MASUK...'" type="submit" class="signupbtn btn4">{{ button }}</button>
-                    </div></center>
+                    </div>
+
+                    <span ng-show="errors">{{ errors }}</span>
+
+                    </center>
 
                 </form>
 </div>
@@ -206,7 +210,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
      })
     .then(function(response) {
       switch (response.status) {
-        case 400:
+        case 404:
           $scope.errors = response.data.errors;
           $scope.button = "MASUK";
         break;
