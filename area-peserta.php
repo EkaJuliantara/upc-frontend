@@ -128,7 +128,7 @@
                         <span ng-hide="hideMember == data.id">{{ data.name }}</span>
                       </td>
                       <td>
-                        <a href="http://127.0.0.1:8000/storage/media/{{ data.media_name }}" target="_blank">Lihat</a>
+                        <a href="http://api.ifest-uajy.com/storage/media/{{ data.media_name }}" target="_blank">Lihat</a>
                       </td>
                       <td>
                         <button ng-hide="hideMember == data.id" ng-click="hidingUpdateMember(data.id)" type="button" class="btn">Sunting</button> <button ng-show="hideMember == data.id" ng-click="updateMember(data)" type="button" class="btn">{{ btnUpdate }}</button> <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
@@ -213,7 +213,7 @@
 
     $scope.getTeam = function() {
 
-      $http.get("http://127.0.0.1:8000/v1/hackfest/"+$scope.idTeam).then(function (response) {
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam).then(function (response) {
 
         $scope.dataTeamLoaded = 0;
         $scope.dataTeam = response.data.data;
@@ -245,7 +245,7 @@
     }
 
     $scope.getDetail = function() {
-      $http.get("http://127.0.0.1:8000/v1/hackfest/"+$scope.idTeam).then(function (response) {
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam).then(function (response) {
 
         $scope.dataDetailsLoaded = 0;
         $('.details').remove();
@@ -256,17 +256,17 @@
         if ($scope.dataTeam.proposal) {
         
           if ($scope.dataTeam.proposal) {
-            $http.get("http://127.0.0.1:8000/v1/media/"+response.data.data.proposal).then(function (response) {
+            $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.proposal).then(function (response) {
               $scope.dataTeam.proposal_name = response.data.data.file_name;
             });
           }
           if ($scope.dataTeam.receipt) {
-            $http.get("http://127.0.0.1:8000/v1/media/"+response.data.data.receipt).then(function (response) {
+            $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.receipt).then(function (response) {
               $scope.dataTeam.receipt_name = response.data.data.file_name;
             });
           }
 
-          var row = angular.element('<tr class="details"><td><a href="http://127.0.0.1:8000/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a></td><td><a ng-show="dataTeam.receipt != 0" href="http://127.0.0.1:8000/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.receipt == 0" type="file" ngf-select="uploadReceipt($file, $invalidFiles, dataTeam.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.receipt == 0" class="receipt-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><span ng-show="dataTeam.status == 0">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span></td><td><button ng-show="dataTeam.receipt == 0" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status == NULL" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
+          var row = angular.element('<tr class="details"><td><a href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a></td><td><a ng-show="dataTeam.receipt != 0" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.receipt == 0" type="file" ngf-select="uploadReceipt($file, $invalidFiles, dataTeam.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.receipt == 0" class="receipt-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><span ng-show="dataTeam.status == 0">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span></td><td><button ng-show="dataTeam.receipt == 0" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status == NULL" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
 
           $('#detail-list').append(row);
 
@@ -292,7 +292,7 @@
         $scope.btnSave = "Menyimpan...";
 
         $scope.proposal.upload = Upload.upload({
-            url: 'http://127.0.0.1:8000/v1/media',
+            url: 'http://api.ifest-uajy.com/v1/media',
             data: { media: $scope.proposal }
         }).then(function (response) {
 
@@ -311,7 +311,7 @@
     $scope.addDetailProcess = function() {
       $http({
         method  : 'PATCH',
-        url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
         data    : $.param($scope.dataDetail),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -328,7 +328,7 @@
         $('.btn.update-detail.'+id).text('Menyimpan...');
 
         $scope.receipt.upload = Upload.upload({
-            url: 'http://127.0.0.1:8000/v1/media',
+            url: 'http://api.ifest-uajy.com/v1/media',
             data: { media: $scope.receipt }
         }).then(function (response) {
 
@@ -336,7 +336,7 @@
 
           $http({
             method  : 'PATCH',
-            url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam,
+            url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
             data    : $.param($scope.dataDetail),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
            })
@@ -359,7 +359,7 @@
 
       $http({
         method  : 'PATCH',
-        url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
         data    : $.param($scope.dataDetail),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -378,7 +378,7 @@
 
       $http({
         method  : 'PATCH',
-        url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
         data    : $.param($scope.dataTeam),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -424,7 +424,7 @@
     $scope.getMembers = function() {
 
       $scope.dataMembersLoaded = 0;
-      $http.get("http://127.0.0.1:8000/v1/hackfest/"+$scope.idTeam+'/members').then(function (response) {
+      $http.get("http://api.ifest-uajy.com/v1/hackfest/"+$scope.idTeam+'/members').then(function (response) {
         if (response.data.data) {
           $scope.dataMembers = response.data.data;
         }else{
@@ -433,7 +433,7 @@
         $scope.dataMembersLoaded = 1;
 
         angular.forEach($scope.dataMembers, function(value, key) {
-          $http.get("http://127.0.0.1:8000/v1/media/"+value.student_id_scan).then(function (response) {
+          $http.get("http://api.ifest-uajy.com/v1/media/"+value.student_id_scan).then(function (response) {
             value.media_name = response.data.data.file_name;
           });
         });
@@ -461,7 +461,7 @@
           $scope.btnSave = "Menyimpan...";
 
           $scope.media.upload = Upload.upload({
-              url: 'http://127.0.0.1:8000/v1/media',
+              url: 'http://api.ifest-uajy.com/v1/media',
               data: {media: $scope.media}
           });
 
@@ -472,7 +472,7 @@
 
             $http({
               method  : 'POST',
-              url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam+'/members',
+              url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members',
               data    : $.param($scope.newMembers),
               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
              })
@@ -511,7 +511,7 @@
 
       $http({
         method  : 'PATCH',
-        url     : 'http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam+'/members/'+data.id,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members/'+data.id,
         data    : $.param(data),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -529,7 +529,7 @@
 
       $('.btn.delete-member.'+id).text('Menghapus...');
 
-      $http.delete('http://127.0.0.1:8000/v1/hackfest/'+$scope.idTeam+'/members/'+id).then(function (response) {
+      $http.delete('http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/members/'+id).then(function (response) {
         $scope.getMembers();
       })
       .then(function(data) {

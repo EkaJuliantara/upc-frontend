@@ -200,7 +200,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
 
     $http({
       method  : 'POST',
-      url     : 'http://127.0.0.1:8000/v1/hackfest/login',
+      url     : 'http://api.ifest-uajy.com/v1/hackfest/login',
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
