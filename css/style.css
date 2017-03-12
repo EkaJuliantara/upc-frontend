@@ -347,7 +347,6 @@ a.site-title:hover {
 
 .cd-timeline-content::before{
     border-left-color: #42b548;
-    border-right: 7px solid #42b548;
 }
 .cd-timeline-block:nth-child(2n) .cd-timeline-content::before {
     border-right-color: #42b548;
@@ -570,6 +569,16 @@ div.register-btn3-change{
 .btn{
     background-color: #42B548 !important;
     color: white;
+}
+
+.btn.delete-detail,
+.btn.delete-member {
+    background-color: #dd4b39 !important;
+}
+
+.btn.delete-detail:hover,
+.btn.delete-member:hover {
+    background-color: #dd4b39 !important;
 }
 
 button.btn:hover{
