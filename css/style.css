@@ -568,13 +568,28 @@ div.register-btn3-change:hover button.register-btn3 {
 div.register-btn3-change{
     width: 100px;
 }
+.btn4{
+    background-color: #42B548 !important;
+    color: white;
+}
 
+a.btn4{
+    display:inline;
+}
+
+div.btn4-change:hover button.btn4{
+    background: #4fa149 !important;
+    color: white;
+}
 #kategori {
     background-color: #42B548;
     color: white;
     height: auto;
 }
 
+.warna {
+    color: #42B548;
+}
 .bgkategori {
     height:auto;
     width: auto;
@@ -589,4 +604,16 @@ div.register-btn3-change{
 
 #site-menu .hide {
     display: none;
+}
+
+#kategori .three {
+    padding: 2%;
+}
+
+#kategori img {
+    border-radius: 120px;
+}
+
+#kategori .nine{
+    text-align: justify;
 }
