@@ -66,7 +66,7 @@
                         <li><a class="menu-link" onclick="closeNav()" href="index.html#bab2" >Hadiah</a></li>
                         <li><a class="menu-link" onclick="closeNav()" href="index.html#kategori" >Kategori</a></li>
                         <li><a class="menu-link" onclick="closeNav()" href="index.html#bab3" >Registrasi</a></li>
-                        <li><a class="menu-link" onclick="closeNav()" href="#" >Area Peserta</a></li>
+                        <li><a class="menu-link" onclick="closeNav()" href="area-peserta.php" >Area Peserta</a></li>
                     </ul></center>
                 </nav>
 
