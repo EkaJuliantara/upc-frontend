@@ -691,3 +691,7 @@ table input{
 #kategori2 li{
     display: inline;
 }
+
+#bab2 .jarak{
+    margin-top: 50px;
+}
