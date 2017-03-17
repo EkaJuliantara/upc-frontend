@@ -12,7 +12,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>HackFest - Pendaftaran Berhasil</title>
-  <meta name="description" content="">
+  <meta name="description" content="HackFest">
   <meta name="author" content="Panitia IFEST #5 UAJY">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -94,18 +94,13 @@
                             </div>
 
                 </section>
-                <section id="head2">
-
-                    <center>
-                        <h1 style="color: #42B548;">Masuk Area Peserta</h1>
-                    </center>
-                    </section>
 
                 <div ng-app="loginApp" ng-controller="loginCtrl" class="twelve columns">
                 <form ng-submit="loginSubmit()">
 
                     <center class="teks warna">
                     <div class="lebarB">
+                        <h1 style="color: #42B548;">Masuk Area Peserta</h1>
                     <div class="pemberitahuan"><label><b>Email</b></label>
                     <input ng-model="formData.email" type="email" placeholder="Enter Email" name="email" required>
 

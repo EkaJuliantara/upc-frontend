@@ -10,13 +10,13 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>Hackfest - Area Peserta</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="HackFest">
+    <meta name="author" content="Panitia IFEST #5 UAJY">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -102,7 +102,7 @@
                     </tr>
                   </thead>
                   <tbody id="detail-list">
-                    
+
                   </tbody>
                 </table>
 
@@ -254,7 +254,7 @@
         $scope.dataTeam = response.data.data;
 
         if ($scope.dataTeam.proposal != 0) {
-        
+
           if ($scope.dataTeam.proposal != 0) {
             $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.proposal).then(function (response) {
               $scope.dataTeam.proposal_name = response.data.data.file_name;
