@@ -10,13 +10,13 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>Hackfest - Area Peserta</title>
-    <meta name="description" content="HackFest">
-    <meta name="author" content="Panitia IFEST #5 UAJY">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -102,7 +102,7 @@
                     </tr>
                   </thead>
                   <tbody id="detail-list">
-
+                    
                   </tbody>
                 </table>
 
@@ -227,21 +227,22 @@
       });
     }
 
-    $scope.uploadProposal = function(file, errFiles) {
+    $scope.uploadProposal = function(file, errFiles, id) {
       $scope.proposal = file;
       $scope.errProposal = errFiles && errFiles[0];
       $scope.infoProposal = $scope.proposal.name;
-    }
-
-    $scope.uploadReceipt = function(file, errFiles, id) {
-      $scope.receipt = file;
-      $scope.errReceipt = errFiles && errFiles[0];
 
       if (id) {
-        $('.receipt-info.'+id).text($scope.receipt.name);
+        $('.proposal-info.'+id).text($scope.proposal.name);
       }else{
-        $scope.infoReceipt= $scope.receipt.name;
+        $scope.infoReceipt= $scope.proposal.name;
       }
+    }
+
+    $scope.uploadReceipt = function(file, errFiles) {
+      $scope.receipt = file;
+      $scope.errReceipt = errFiles && errFiles[0];
+      $scope.infoReceipt= $scope.receipt.name;
     }
 
     $scope.getDetail = function() {
@@ -253,20 +254,20 @@
 
         $scope.dataTeam = response.data.data;
 
-        if ($scope.dataTeam.proposal != 0) {
-
-          if ($scope.dataTeam.proposal != 0) {
+        if ($scope.dataTeam.receipt != null) {
+        
+          if ($scope.dataTeam.proposal != null) {
             $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.proposal).then(function (response) {
               $scope.dataTeam.proposal_name = response.data.data.file_name;
             });
           }
-          if ($scope.dataTeam.receipt != 0) {
+          if ($scope.dataTeam.receipt != null) {
             $http.get("http://api.ifest-uajy.com/v1/media/"+response.data.data.receipt).then(function (response) {
               $scope.dataTeam.receipt_name = response.data.data.file_name;
             });
           }
 
-          var row = angular.element('<tr class="details"><td><a href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a></td><td><a ng-show="dataTeam.receipt != 0" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.receipt == 0" type="file" ngf-select="uploadReceipt($file, $invalidFiles, dataTeam.id)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.receipt == 0" class="receipt-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><span ng-show="dataTeam.status == 0">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span></td><td><button ng-show="dataTeam.receipt == 0" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status == 0" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
+          var row = angular.element('<tr class="details"><td><a ng-show="dataTeam.proposal != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.proposal == null && dataTeam.status == 1" type="file" ngf-select="uploadProposal($file, $invalidFiles, dataTeam.id)" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.proposal == null && dataTeam.status == 1" class="proposal-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><a ng-show="dataTeam.receipt != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a></td><td><span ng-show="dataTeam.status == null">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span><span ng-show="dataTeam.status == 0">Tidak lolos</span></td><td><button ng-show="dataTeam.status == 1 && dataTeam.proposal == null" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status != null" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
 
           $('#detail-list').append(row);
 
@@ -274,7 +275,7 @@
 
         }else{
 
-          var row = angular.element('<tr class="new-details"><td><button type="file" ngf-select="uploadProposal($file, $invalidFiles)" ngf-max-size="10MB" class="btn">Unggah</button> <span>{{ infoProposal }}</span></td><td></td><td></td><td><button ng-click="addDetail()" type="button" class="btn">{{ btnSave }}</button></td></tr>');
+          var row = angular.element('<tr class="new-details"><td></td><td><button ng-show="dataTeam.receipt == null" type="file" ngf-select="uploadReceipt($file, $invalidFiles)" accept="image/*" ngf-max-size="10MB" class="btn">Unggah</button> <span>{{ infoReceipt }}</span></td><td></td><td><button ng-click="addDetail()" type="button" class="btn">{{ btnSave }}</button></td></tr>');
 
           $('#detail-list').append(row);
 
@@ -287,23 +288,23 @@
     }
 
     $scope.addDetail = function() {
-      if ($scope.proposal) {
+      if ($scope.receipt) {
 
         $scope.btnSave = "Menyimpan...";
 
-        $scope.proposal.upload = Upload.upload({
+        $scope.receipt.upload = Upload.upload({
             url: 'http://api.ifest-uajy.com/v1/media',
-            data: { media: $scope.proposal }
+            data: { media: $scope.receipt }
         }).then(function (response) {
 
-          $scope.infoProposal = "Upload";
-          $timeout(function() { $scope.infoProposal = "Pilih file untuk diunggah." }, 1000);
-          $scope.dataDetail['proposal'] = response.data.data.id;
+          $scope.infoReceipt = "Upload";
+          $timeout(function() { $scope.infoReceipt = "Pilih file untuk diunggah." }, 1000);
+          $scope.dataDetail['receipt'] = response.data.data.id;
           $scope.addDetailProcess();
-          $scope.proposal = "";
+          $scope.receipt = "";
         });
       }else{
-          $scope.infoDocument = "Unggah proposal terlebih dahulu";
+          $scope.infoReceipt = "Unggah bukti pembayaran terlebih dahulu";
           $scope.btnSave = "Simpan";
       }
     }
@@ -311,7 +312,7 @@
     $scope.addDetailProcess = function() {
       $http({
         method  : 'PATCH',
-        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail',
         data    : $.param($scope.dataDetail),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })
@@ -323,30 +324,33 @@
 
     $scope.updateDetail = function(id) {
 
-      if ($scope.receipt) {
+      if ($scope.proposal) {
 
         $('.btn.update-detail.'+id).text('Menyimpan...');
 
-        $scope.receipt.upload = Upload.upload({
+        $scope.proposal.upload = Upload.upload({
             url: 'http://api.ifest-uajy.com/v1/media',
-            data: { media: $scope.receipt }
+            data: { media: $scope.proposal }
         }).then(function (response) {
 
-          $scope.dataDetail['receipt'] = response.data.data.id;
+          $scope.dataDetail['proposal'] = response.data.data.id;
 
           $http({
             method  : 'PATCH',
-            url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
+            url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail',
             data    : $.param($scope.dataDetail),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
            })
           .then(function(data) {
             $('.btn.update-detail.'+id).text('Simpan');
-            $('.receipt-info.'+id).text('Pilih file untuk diunggah');
+            $('.proposal-info.'+id).text('Pilih file untuk diunggah');
             $scope.getDetail();
-            $scope.receipt = "";
+            $scope.proposal = "";
           });
         });
+      }else{
+        $('.btn.update-detail.'+id).text('Simpan');
+        $('.proposal-info.'+id).text('Unggah proposal terlebih dahulu');
       }
     }
 
@@ -354,12 +358,13 @@
 
       $('.btn.delete-detail.'+id).text('Menghapus...');
 
-      $scope.dataDetail['proposal'] = 0;
-      $scope.dataDetail['receipt'] = 0;
+      $scope.dataDetail['proposal'] = null;
+      $scope.dataDetail['receipt'] = null;
+      $scope.dataDetail['status'] = null;
 
       $http({
         method  : 'PATCH',
-        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam,
+        url     : 'http://api.ifest-uajy.com/v1/hackfest/'+$scope.idTeam+'/detail',
         data    : $.param($scope.dataDetail),
         headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
        })

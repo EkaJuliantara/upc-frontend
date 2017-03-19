@@ -246,10 +246,6 @@ registerApp.controller("registerCtrl", function($scope, $http, $window) {
 
     $scope.button = "MENDAFTAR...";
 
-    $scope.formData['receipt'] = 0;
-    $scope.formData['proposal'] = 0;
-    $scope.formData['status'] = 0;
-
     $http({
       method  : 'POST',
       url     : 'http://api.ifest-uajy.com/v1/hackfest',
