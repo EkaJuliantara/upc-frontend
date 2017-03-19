@@ -148,7 +148,7 @@
               <div class="box-header">
                 <h5>Pengumuman</h5>
               </div>
-              <div class="box-body">
+              <div class="box-body" style="text-align: left;">
                 <p>Sebelum mengirimkan proposal, harus melunasi biaya pendaftaran terlebih dahulu yaitu Rp 100.000,-</p>
                 <p>Untuk pembayaran dapat dilakukan langsung ke stand IFest di Lobby Fakultas Teknologi Industri, Kampus 3, Gedung Bonaventura, Jalan Babarsari 43 Yogyakarta atau melalui transfer ke <strong> Bank BCA dengan nomor rekening 0373749971 atas nama Grelly Lucia Yovellia Londo.</strong></p>
                 <p>Kecepatan koneksi internet mempengaruhi cepatnya data ditampilkan. Apabila data belum tertampil, silakan muat ulang halaman.</p>
