@@ -10,3 +10,5 @@ sr.reveal( "#cd-timeline .cd-timeline-block", { reset: true, viewOffset: {top: 3
   function addCommasToNum( num ){
     return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "," );
   }
+
+sr.reveal( "#kategori .row", { reset: true, viewOffset: { top: 30 } } );
