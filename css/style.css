@@ -712,3 +712,14 @@ table input{
     border-radius: 18px;
     margin-top: 30px;
 }
+
+#syarat a {
+    text-decoration: none;
+    display: inline-block;
+    color: blue;
+}
+
+#syarat a:hover{
+    text-decoration: underline;
+    color: #F98009;
+}
