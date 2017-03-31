@@ -723,3 +723,14 @@ table input{
     text-decoration: underline;
     color: #F98009;
 }
+
+.box-body a {
+    text-decoration: none;
+    display: inline-block;
+    color: blue;
+}
+
+.box-body a {
+text-decoration: underline;
+color: #F98009;
+}
