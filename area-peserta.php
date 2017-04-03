@@ -117,7 +117,7 @@
                   <thead>
                     <tr>
                       <th>Nama</th>
-                      <th>SKM</th>
+                      <th>Surat Keterangan Mahasiswa Aktif</th>
                       <th></th>
                     </tr>
                   </thead>
