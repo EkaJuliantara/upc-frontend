@@ -94,7 +94,10 @@
                         Bukti Pembayaran
                       </th>
                       <th>
-                        Status
+                        Status Proposal
+                      </th>
+                      <th>
+                        Status Pembayaran
                       </th>
                       <th>
 
@@ -270,7 +273,7 @@
             });
           }
 
-          var row = angular.element('<tr class="details"><td><a ng-show="dataTeam.proposal != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.proposal == null && dataTeam.status == 1" type="file" ngf-select="uploadProposal($file, $invalidFiles, dataTeam.id)" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.proposal == null && dataTeam.status == 1" class="proposal-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><a ng-show="dataTeam.receipt != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a></td><td><span ng-show="dataTeam.status == null">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span><span ng-show="dataTeam.status == 0">Tidak lolos</span></td><td><button ng-show="dataTeam.status == 1 && dataTeam.proposal == null" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status != null" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
+          var row = angular.element('<tr class="details"><td><a ng-show="dataTeam.proposal != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.proposal_name }}" target="_blank">Lihat</a><button ng-show="dataTeam.proposal == null && dataTeam.status == 1" type="file" ngf-select="uploadProposal($file, $invalidFiles, dataTeam.id)" ngf-max-size="10MB" class="btn">Unggah</button> <span ng-show="dataTeam.proposal == null && dataTeam.status == 1" class="proposal-info {{ dataTeam.id }}">Pilih file untuk diunggah</span></td><td><a ng-show="dataTeam.receipt != null" href="http://api.ifest-uajy.com/storage/media/{{ dataTeam.receipt_name }}" target="_blank">Lihat</a></td><td><span ng-show="dataTeam.status == null">Menunggu verifikasi</span><span ng-show="dataTeam.status == 1">Lolos</span><span ng-show="dataTeam.status == 0">Tidak lolos</span></td><td><span ng-show="dataTeam.confirmed == null">Menunggu verifikasi</span><span ng-show="dataTeam.confirmed == 1">Lolos</span><span ng-show="dataTeam.confirmed == 0">Tidak lolos</span></td><td><button ng-show="dataTeam.status == 1 && dataTeam.proposal == null" ng-click="updateDetail(dataTeam.id)" type="button" class="btn update-detail {{ dataTeam.id }}">Simpan</button><button ng-show="dataTeam.status != null" ng-click="destroyDetail(dataTeam.id)" type="button" class="btn delete-detail {{ dataTeam.id }}">Hapus</button></td></tr>');
 
           $('#detail-list').append(row);
 
