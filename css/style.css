@@ -675,6 +675,10 @@ table input{
     width: 100%;
 }
 
+table input[type="radio"]{
+    width: auto;
+}
+
 .box-header {
     color: #42B549 !important;
     text-align: center;
