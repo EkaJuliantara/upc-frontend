@@ -1,5 +1,5 @@
-var base_url = "http://api.ifest-uajy.com/v1/hackfest/";
-var media_url = "http://api.ifest-uajy.com/v1/media/";
+var base_url = "http://api.ifest-uajy.com/v1/hackfest";
+var media_url = "http://api.ifest-uajy.com/v1/media";
 
 function httpInterceptor() {
   return {
@@ -85,7 +85,7 @@ loginApp.controller("loginCtrl", function($scope, $http, $window) {
 
     $http({
       method  : 'POST',
-      url     : base_url+'login',
+      url     : base_url+'/'+'login',
       data    : $.param($scope.formData),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -140,7 +140,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
 
   $scope.getTeam = function() {
 
-    $http.get(base_url+$scope.idTeam).then(function (response) {
+    $http.get(base_url+'/'+$scope.idTeam).then(function (response) {
 
       $scope.dataTeamLoaded = 0;
       $scope.dataTeam = response.data.data;
@@ -173,7 +173,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
   }
 
   $scope.getDetail = function() {
-    $http.get(base_url+$scope.idTeam).then(function (response) {
+    $http.get(base_url+'/'+$scope.idTeam).then(function (response) {
 
       $scope.dataDetailsLoaded = 0;
       $('.details').remove();
@@ -184,12 +184,12 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
       if ($scope.dataTeam.receipt != null) {
 
         if ($scope.dataTeam.proposal != null) {
-          $http.get(media_url+response.data.data.proposal).then(function (response) {
+          $http.get(media_url+'/'+response.data.data.proposal).then(function (response) {
             $scope.dataTeam.proposal_name = response.data.data.file_name;
           });
         }
         if ($scope.dataTeam.receipt != null) {
-          $http.get(media_url+response.data.data.receipt).then(function (response) {
+          $http.get(media_url+'/'+response.data.data.receipt).then(function (response) {
             $scope.dataTeam.receipt_name = response.data.data.file_name;
           });
         }
@@ -239,7 +239,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
   $scope.addDetailProcess = function() {
     $http({
       method  : 'PATCH',
-      url     : base_url+$scope.idTeam+'/detail',
+      url     : base_url+'/'+$scope.idTeam+'/detail',
       data    : $.param($scope.dataDetail),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -264,7 +264,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
 
         $http({
           method  : 'PATCH',
-          url     : base_url+$scope.idTeam+'/detail',
+          url     : base_url+'/'+$scope.idTeam+'/detail',
           data    : $.param($scope.dataDetail),
           headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
          })
@@ -291,7 +291,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
 
     $http({
       method  : 'PATCH',
-      url     : base_url+$scope.idTeam+'/detail',
+      url     : base_url+'/'+$scope.idTeam+'/detail',
       data    : $.param($scope.dataDetail),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -310,7 +310,7 @@ app.controller('dataTeamCtrl', function($scope, $http, $compile, $timeout, Uploa
 
     $http({
       method  : 'PATCH',
-      url     : base_url+$scope.idTeam,
+      url     : base_url+'/'+$scope.idTeam,
       data    : $.param($scope.dataTeam),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -356,7 +356,7 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
   $scope.getMembers = function() {
 
     $scope.dataMembersLoaded = 0;
-    $http.get(base_url+$scope.idTeam+'/members').then(function (response) {
+    $http.get(base_url+'/'+$scope.idTeam+'/members').then(function (response) {
       if (response.data.data) {
         $scope.dataMembers = response.data.data;
       }else{
@@ -365,7 +365,7 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
       $scope.dataMembersLoaded = 1;
 
       angular.forEach($scope.dataMembers, function(value, key) {
-        $http.get(media_url+value.student_id_scan).then(function (response) {
+        $http.get(media_url+'/'+value.student_id_scan).then(function (response) {
           value.media_name = response.data.data.file_name;
         });
       });
@@ -404,7 +404,7 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
 
           $http({
             method  : 'POST',
-            url     : base_url+$scope.idTeam+'/members',
+            url     : base_url+'/'+$scope.idTeam+'/members',
             data    : $.param($scope.newMembers),
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
            })
@@ -443,7 +443,7 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
 
     $http({
       method  : 'PATCH',
-      url     : base_url+$scope.idTeam+'/members/'+data.id,
+      url     : base_url+'/'+$scope.idTeam+'/members/'+data.id,
       data    : $.param(data),
       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
      })
@@ -461,7 +461,7 @@ app.controller('dataMembersCtrl', function($scope, $http, $compile, $timeout, Up
 
     $('.btn.delete-member.'+id).text('Menghapus...');
 
-    $http.delete(base_url+$scope.idTeam+'/members/'+id).then(function (response) {
+    $http.delete(base_url+'/'+$scope.idTeam+'/members/'+id).then(function (response) {
       $scope.getMembers();
     })
     .then(function(data) {
