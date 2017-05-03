@@ -4,13 +4,13 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HackFest - Pendaftaran Berhasil</title>
+  <title>HackFest - Pendaftaran</title>
   <meta name="description" content="HackFest">
   <meta name="author" content="Panitia IFEST #5 UAJY">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- CSS
@@ -24,10 +24,26 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="scrollreveal-master/dist/scrollreveal.js"></script>
   <script src="scrollreveal-master/dist/scrollreveal.min.js"></script>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
   <script>
     window.sr = ScrollReveal();
   </script>
+
+  <style type="text/css">
+    .error-msg.ng-binding {
+      margin-bottom: 15px;
+      display: block;
+    }
+    .box {
+      text-align: center;
+      background: #fff;
+      width: 75%;
+      padding: 30px;
+      margin: auto;
+      margin-top: 30px;
+    }
+  </style>
 
  </head>
 <body >
@@ -68,79 +84,59 @@
         </div>
     </div>
 </section>
-<section id="isi">
-    <section id="opening2" class="opening">
+<section id="isi" class="full">
+
+    
+    <section ng-app="registerApp" ng-controller="registerCtrl" id="gab">
         <div class="container">
             <div class="row">
-                <section id="pendaftaran" class="pendaftaran_berhasil">
-                            <div class="six columns kanan" >
-                                <ol class="breadcrumb">
-                                    <li>
-                                        <a href="index.html">
-                                        Home
-                                        </a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="pendaftaran.html">
-                                        Pendaftaran
-                                    </a>
-                                    </li>
-                                    <li class="active">
-                                        Registrasi-sukses
-                                    </li>
-                                </ol>
-                            </div>
-
-                </section>
-
-
-                <div class="twelve columns" style="margin-top: 60px">
-
-                    <center class="teks">
-                        <div><h2 class="bg1">Pendaftaran Berhasil!</h2>
-                        <div class="bg2">
-              <p>Selamat anda telah berhasil terdaftar sebagai peserta Hackfest.<br>
-              Silakan melihat dan melengkapi data kepesertaan anda melalui tautan berikut.</p>
-              <a href="http://ifest-uajy.com/hackfest/area-peserta.php">Area Peserta</a>
-              <br>
-              <p>Terima Kasih.</p></div></center>
-</div></div>
+              <div class="twelve columns">
+                <div class="box">
+                  <h3>Pendaftaran Ditutup</h3>
+                <p>Mohon maaf. Mengingat kuota pendaftar HackFest sudah memenuhi kuota, dengan berat hati kami menutup pendaftaran HackFest. </br></br>Terima kasih kepada teman-teman yang sudah mendukung dan berambisi untuk berpartisipasi dalam acara ini. Hayo berpartisipasi kembali pada HackFest berikutnya!</p>
+                </div>
+                
+              </div>
             </div>
         </div>
-    </section>
-    <section id="penutup">
-        <div class="container">
-            <div class="row">
-                <div class="six columns">
-                    <center><h3 >CONTACT PERSON</h3></center><br/><ul class="bullet"><li>Ryandi (0857-8269-6878)</li><li>Dio (0878-3992-2155)</li></ul>
-                </div>
-                <div class="six columns">
-                    <center><h3>Follow Us</h3></center><br/>
-                    <center class="gambar"><a href="http://line.me/ti/p/~@ykb1847q"><img src="images/ln.png" ></a><a href="https://www.instagram.com/ifest_uajy/"><img src="images/ins.png" ></a></center>
-                </div>
+      </section>
+<section id="penutup">
+    <div class="container">
+        <div class="row">
+            <div class="six columns">
+                <center><h3 >CONTACT PERSON</h3></center><br/><ul class="bullet"><li>Ryandi (0857-8269-6878)</li><li>Dio (0878-3992-2155)</li></ul>
+            </div>
+            <div class="six columns">
+                <center><h3>Follow Us</h3></center><br/>
+                <center class="gambar"><a href="http://line.me/ti/p/~@ykb1847q"><img src="images/ln.png" ></a><a href="https://www.instagram.com/ifest_uajy/"><img src="images/ins.png" ></a></center>
             </div>
         </div>
-    </section>
+    </div>
 </section>
+
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
    <script>
      //- hljs.initHighlightingOnLoad();
 
 
-     sr.reveal( "#penutup .columns", { reset: true, viewOffset: { top: 64 } } );
-         sr.reveal( "#opening2 ", { reset: true, viewOffset: { top: 64 } } );
+        sr.reveal( "#penutup .columns", { reset: true, viewOffset: { top: 64 } } );
+         sr.reveal( "#pendaftaran .columns", { reset: true, viewOffset: { top: 64 } } );
+ sr.reveal( "#juduls .columns", { reset: true, viewOffset: { top: 64 } } );
+   sr.reveal( "#syarat .columns", { reset: true, viewOffset: { top: 64 } } );
+   sr.reveal("#gab .columns", { reset: true, viewOffset: { top: 64} } );
      function addCommasToNum( num ){
        return num.toString().replace( /\B(?=(\d{3})+(?!\d))/g, "," );
      }
 
    </script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/style.js"></script>
+ <script src="js/menu.js"> </script>
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/style.js"></script>
-<script src="js/menu.js"> </script>
-<script src="vertical-timeline/js/main.js"></script>
-<script src="vertical-timeline/js/modernizr.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+<script type="text/javascript" src="js/hackfestApp.js"></script>
 
 </body>
 </html>
