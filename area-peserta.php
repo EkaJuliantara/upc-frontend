@@ -73,13 +73,13 @@
                       <th>Kategori Lomba</th>
                       <td>{{ dataTeam.category.name }}</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                       <th>Vegetarian</th>
                       <td>
                         <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value='"1"' /> Iya
                         <input ng-model="dataTeam.vegetarian" type="radio" name="vegetarian" ng-value='"0"' /> Tidak
                       </td>
-                    </tr>
+                  </tr>-->
                   </table>
                   <button type="submit" class="btn">{{ button }}</button>
                 </form>
