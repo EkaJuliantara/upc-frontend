@@ -141,7 +141,11 @@
                         <a href="http://api.ifest-uajy.com/storage/media/{{ data.media_name }}" target="_blank">Lihat</a>
                       </td>
                       <td>
-                        <button ng-hide="hideMember == data.id" ng-click="hidingUpdateMember(data.id)" type="button" class="btn">Sunting</button> <button ng-show="hideMember == data.id" ng-click="updateMember(data)" type="button" class="btn">{{ btnUpdate }}</button> <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
+                        <button ng-hide="hideMember == data.id" ng-click="hidingUpdateMember(data.id)" type="button" class="btn">Sunting</button>
+                        <button ng-show="hideMember == data.id" ng-click="updateMember(data)" type="button" class="btn">{{ btnUpdate }}</button>
+                        <button ng-click="destroyMember(data.id)" type="button" class="btn delete-member {{ data.id }}">Hapus</button>
+                        <button ng-hide="data.vegetarian == 1" ng-click="updateVegetarian(data)" class="btn">Vegetarian</button>
+                        <button ng-hide="data.vegetarian == 0" ng-click="updateVegetarian(data)" class="btn delete-member">Tidak Vegetarian</button>
                       </td>
                     </tr>
                   </tbody>
