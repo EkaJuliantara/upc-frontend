@@ -15,11 +15,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="bower_components/flexslider/flexslider.css">
   <link rel="stylesheet" href="vertical-timeline/css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mobile.css">
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -88,6 +90,16 @@
 
                 </div>
             </div>
+        </div>
+    </section>
+    <section >
+        <div id="slideshow" class="flexslider">
+            <ul class="slides">
+                <li><img src="images/juara1.jpg"></li>
+                <li><img src="images/juara2.jpg"></li>
+                <li><img src="images/juara3.jpg"></li>
+                <li><img src="images/juaraFavorit.jpg"></li>
+            </ul>
         </div>
     </section>
     <section id="opening2" class="opening">
@@ -309,6 +321,14 @@
   <script src="scrollreveal-master/dist/scrollreveal.js"></script>
   <script src="scrollreveal-master/dist/scrollreveal.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+  <script>
+$(function() {
+   $('#slideshow').flexslider({
+       animation: 'slide'
+   });
+});
+</script>
     <script src="js/menu.js"> </script>
   <script>
     window.sr = ScrollReveal();
