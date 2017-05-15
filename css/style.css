@@ -47,6 +47,19 @@ a{
     display: block;
         color: black;
 }
+/*utama*/
+
+#utama {
+    background-image: url('../images/utama.jpg');
+    background-size: cover;
+}
+
+#utama .text{
+    font-size: 50px;
+    margin:100px 0px;
+    color: #4981C2;
+    text-shadow: 2px 2px #0D0D0F;
+}
 /* Header */
 
 .header {
