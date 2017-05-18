@@ -48,11 +48,15 @@
     </div>
 </section>
 <section id="utama">
+    <div class="layer">
+
     <div class="container">
     <div class="row">
         <div class="twelve columns">
+
             <div class="text">
     <center><p>SELAMAT KEPADA PARA PEMENANG <br/> TERIMA KASIH KEPADA SELURUH REKAN-REKAN <br/>YANG TELAH BERPARTISIPASI DALAM HACKFEST 2017<BR/> #HACKFESTUAJY <br/>SAMPAI JUMPA DI HACKFESTUAJY 2018</p></center>
+</div>
 </div>
 </div>
 </div>
@@ -109,9 +113,60 @@
         <div id="slideshow" class="flexslider">
             <ul class="slides">
                 <li><img src="images/juara1.jpg"></li>
+                <li><center><h1>Juara 1</h1></center>
+                    <p>
+~Nama kelompok: Blush n Co<br/>
+~Nama Anggota:<br/>
+Yohana Clarisa (Tidak Hadir)<br/>
+Abia Darma Lemauel<br/>
+Marcella Devina Setiawan (Tidak Hadir)<br/>
+Reinardus Redo Haryono<br/><br/>
+
+~Asal Universitas: Universitas Ciputra<br/>
+~Nama Aplikasi: Blush n Co<br/>
+~Deskripsi Apliaksi:<br/>
+Blush & Co adalah sebuah marketplace makeup artist dan beauty services dimana customer dan vendor dapat bertemu dan melakukan transaksi melalui marketplace tsb. Dengan memberikan rasa percaya pada customer dalam menggunakan jasa MUA melalui pemesanan online. Karena vendor-vendor yang terdaftar di blush n co sudah terverifikasi dengan baik dan dapat dipertanggungjawabkan dan memberikan kemudahan bagi customer dalam mencari vendor MUA yang berkualitas dan dengan harga yang terjangkau.
+</p></li>
                 <li><img src="images/juara2.jpg"></li>
+                <li><h1>Juara 2</h1>
+                    <p>
+~Nama kelompok: PetQper<br/>
+~Nama anggota:<br/>
+Evan Tanuwijaya<br/>
+Adinda Widitya<br/>
+<br/>
+~Asal Universitas: Universitas Ciputra<br/>
+~Nama Aplikasi: PetQper<br/>
+~Deskripsi Aplikasi:<br/>
+PetQper adalah aplikasi berbasis android yang ditujukan untuk orang – orang yang memiliki hewan peliharaan. Latar belakang dari didirikannya aplikasi ini antara lain adalah berbagai masalah yang dihadapi oleh para pemilik hewan peliharaan saat mereka ingin pergi dan tidak bisa membawa hewan peliharaan mereka.
+</p>
+</li>
                 <li><img src="images/juara3.jpg"></li>
+                <li><h1>Juara 3</h1>
+<p>~Nama kelompok: Twentifour<br/>
+~Nama anggota:<br/>
+Ivan Tommy Marlietama<br/>
+Kevin Tommy Marlietama<br/>
+Ian Budi Kurniawan<br/>
+<br/>
+~Asal Universitas: Universitas Ciputra<br/>
+~Nama Aplikasi: Twentifour<br/>
+~Deskripsi Aplikasi:<br/>
+Twentifour adalah berbasis android yang bergerak di bidang travel. Aplikasi ini akan menghubungkan para travel guide lokal dengan para turis mulai dari turis lokal sampai dengan turis luar negeri. Kelebihan dari aplikasi yang mereka buat ini selain bisa menjadi mata pencaharian setiap orang namun juga bisa memperkecil dan meminimalisir pengeluaran yang tidak diperlukan apabila kita merancang sebuah perjalanan.
+</p></li>
                 <li><img src="images/juaraFavorit.jpg"></li>
+                <li><h1>Juara Favorit</h1><p>
+~Nama kelompok: Lidah Kurow<br/>
+Moh Ilham Kholifahtur C (ngak dateng)<br/>
+Muhammad Fidaus H<br/>
+Rendy Andrian S<br/>
+Almuddin Manda<br/>
+Setya Kristyatama<br/><br/>
+~Asal Universitas: Universitas Telkom Indonesia<br/>
+~Nama Aplikasi: Shimbis - Hidro<br/>
+~Deskripsi Aplikasi<br/>
+Aplikasi berbasis android dan web yang akan membantu para masyarakat agraris. Aplikasi ini bisa membantu para petani untuk memantau perkembangan dari tumbuhan yang mereka miliki. Hal yang mampu dipantau oleh aplikasi ini antara lain intensitas cahaya, suhu, kelembapan, dan ph. Aplikasi ini diharapkan bisa memberikan solusi untuk bisa menjalankan bisnis hidroponik yang baik sesuai dengan prosedur guna mendapatkan hasil tanaman yang berkualitas tinggi.
+</p>
             </ul>
         </div>
     </div>
@@ -338,8 +393,11 @@
   <script src="bower_components/flexslider/jquery.flexslider-min.js"></script>
   <script>
 $(function() {
-   $('#slideshow').flexslider({
-       animation: 'slide'
+   $('.flexslider').flexslider({
+       animation: "slide",
+       itemWidth: 210,
+       minItems: 2,
+       maxItems: 2
    });
 });
 </script>
